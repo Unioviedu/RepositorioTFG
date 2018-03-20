@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Titulo</title>
+</head>
+<body>
+	<table class="egt">
+	<caption>Tabla con caption</caption>
+	  <tr>
+	    <th>Hoy</th>
+	    <th>Mañana</th>
+	    <th>Viernes</th>
+	  </tr>
+
+	  <tr>
+	    <td>Soleado</td>
+	    <td>Mayormente soleado</td>
+	    <td>Parcialmente nublado</td>
+	  </tr>
+
+	  <tr>
+	    <td>19C</td>
+	    <td>17C</td>
+	    <td>12C</td>
+	  </tr>
+
+	  <tr>
+	    <td>E 13 km/h</td>
+	    <td>E 11 km/h</td>
+	    <td>S 16 km/h</td>
+	  </tr>
+	</table>
+</body>
+</html>

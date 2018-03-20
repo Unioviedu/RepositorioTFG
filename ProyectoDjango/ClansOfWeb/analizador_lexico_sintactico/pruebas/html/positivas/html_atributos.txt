@@ -1,0 +1,38 @@
+<html lang="es">
+<head id="head">
+	<title>Titulo</title>
+</head>
+<body class="body">
+	<header>
+		<nav>
+			<h1 class="Encabezado">Esto es un encabezado primero</h1>
+			<h2>Esto es un encabezado segundo</h2>
+			<h6>Esto es un encabezado sexto</h6>
+		</nav>	
+	</header>
+
+	<section>
+		<aside>
+			<article title="Articulo">
+				<p id="parrafo">Esto es un parrafo</p>
+			</article>
+			<p>Esto es un parrafo</p>
+		</aside>
+
+		<section>
+			<p title="Parrafo">Esto es un parrafo</p>
+			<aside>
+				<a href="https://developer.mozilla.org">Esto es un enlace</a>
+			</aside>
+			<article>
+				<a href="https://developer.mozilla.org">Esto es un enlace</a>
+			</article>
+		</section>
+		<img src="casarural.jpg">
+	</section>
+
+	<footer>
+		<img src="casarural.jpg">
+	</footer>
+</body>
+</html>

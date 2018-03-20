@@ -1,0 +1,6 @@
+* {
+	border: 10
+	margin: 12
+	height: 5px
+	width: 6px
+}

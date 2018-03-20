@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>Titulo</title>
+</head>
+<body>
+	<h1>Esto es un encabezado primero</h1>
+	<h2>Esto es un encabezado segundo</h2>
+	<h6>Esto es un encabezado sexto</h6>
+
+	<p>Esto es un parrafo</p>
+
+	<a href="https://developer.mozilla.org">Esto es un enlace</a>
+	<img src="casarural.jpg"/>
+	<br>
+</body>
+</html>

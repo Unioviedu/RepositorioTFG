@@ -1,0 +1,1941 @@
+Created by PLY version 3.10 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> doc
+Rule 1     doc -> styles
+Rule 2     styles -> empty
+Rule 3     styles -> styles style
+Rule 4     style -> selectors BRACKET_INITIAL rules BRACKET_FINISH
+Rule 5     rules -> empty
+Rule 6     rules -> rules rule
+Rule 7     rule -> MARGIN directions VALUE
+Rule 8     rule -> BORDER DASH COLOR VALUE
+Rule 9     rule -> BORDER DASH WIDTH VALUE
+Rule 10    rule -> FONT DASH SIZE VALUE
+Rule 11    rule -> FONT DASH COLOR VALUE
+Rule 12    rule -> PADDING directions VALUE
+Rule 13    rule -> HEIGHT VALUE
+Rule 14    rule -> WIDTH VALUE
+Rule 15    rule -> BACKGROUND VALUE
+Rule 16    rule -> COLUMNS VALUE
+Rule 17    selectors -> selector
+Rule 18    selectors -> selectors COMA selector
+Rule 19    selector -> selector_universal
+Rule 20    selector -> selector_type
+Rule 21    selector -> selector_attribute
+Rule 22    selector -> selector_class
+Rule 23    selector -> selector_id
+Rule 24    selector_universal -> ASTERISK
+Rule 25    selector_type -> type
+Rule 26    selector_type -> type GREATER_THAN type
+Rule 27    selector_attribute -> CURLY_INITIAL attribute CURLY_FINISH
+Rule 28    selector_attribute -> CURLY_INITIAL attribute EQUAL_TEXT CURLY_FINISH
+Rule 29    selector_attribute -> type CURLY_INITIAL attribute CURLY_FINISH
+Rule 30    selector_attribute -> type CURLY_INITIAL attribute EQUAL_TEXT CURLY_FINISH
+Rule 31    selector_class -> POINT_TEXT
+Rule 32    selector_class -> type POINT_TEXT
+Rule 33    selector_id -> HASHTAG_TEXT
+Rule 34    directions -> empty
+Rule 35    directions -> DASH TOP
+Rule 36    directions -> DASH BOTTOM
+Rule 37    directions -> DASH LEFT
+Rule 38    directions -> DASH RIGHT
+Rule 39    id -> ID
+Rule 40    class -> CLASS
+Rule 41    href -> HREF
+Rule 42    src -> SRC
+Rule 43    lang -> LANG
+Rule 44    html -> HTML
+Rule 45    head -> HEAD
+Rule 46    body -> BODY
+Rule 47    section -> SECTION
+Rule 48    aside -> ASIDE
+Rule 49    article -> ARTICLE
+Rule 50    nav -> NAV
+Rule 51    ul -> UL
+Rule 52    ol -> OL
+Rule 53    footer -> FOOTER
+Rule 54    header -> HEADER
+Rule 55    table -> TABLE
+Rule 56    tr -> TR
+Rule 57    link -> LINK
+Rule 58    p -> P
+Rule 59    h -> H
+Rule 60    li -> LI
+Rule 61    img -> IMG
+Rule 62    a -> A
+Rule 63    th -> TH
+Rule 64    td -> TD
+Rule 65    caption -> CAPTION
+Rule 66    empty -> <empty>
+Rule 67    type -> html
+Rule 68    type -> body
+Rule 69    type -> head
+Rule 70    type -> section
+Rule 71    type -> aside
+Rule 72    type -> article
+Rule 73    type -> nav
+Rule 74    type -> ul
+Rule 75    type -> ol
+Rule 76    type -> footer
+Rule 77    type -> header
+Rule 78    type -> table
+Rule 79    type -> p
+Rule 80    type -> h
+Rule 81    type -> img
+Rule 82    type -> a
+Rule 83    type -> TITLE
+Rule 84    type -> link
+Rule 85    type -> th
+Rule 86    type -> td
+Rule 87    type -> tr
+Rule 88    type -> caption
+Rule 89    type -> li
+Rule 90    attribute -> id
+Rule 91    attribute -> class
+Rule 92    attribute -> href
+Rule 93    attribute -> src
+Rule 94    attribute -> TITLE
+Rule 95    attribute -> lang
+
+Terminals, with rules where they appear
+
+A                    : 62
+ARTICLE              : 49
+ASIDE                : 48
+ASTERISK             : 24
+BACKGROUND           : 15
+BODY                 : 46
+BORDER               : 8 9
+BOTTOM               : 36
+BRACKET_FINISH       : 4
+BRACKET_INITIAL      : 4
+CAPTION              : 65
+CLASS                : 40
+COLOR                : 8 11
+COLUMNS              : 16
+COMA                 : 18
+CURLY_FINISH         : 27 28 29 30
+CURLY_INITIAL        : 27 28 29 30
+DASH                 : 8 9 10 11 35 36 37 38
+EQUAL_TEXT           : 28 30
+FONT                 : 10 11
+FOOTER               : 53
+GREATER_THAN         : 26
+H                    : 59
+HASHTAG_TEXT         : 33
+HEAD                 : 45
+HEADER               : 54
+HEIGHT               : 13
+HREF                 : 41
+HTML                 : 44
+ID                   : 39
+IMG                  : 61
+LANG                 : 43
+LEFT                 : 37
+LI                   : 60
+LINK                 : 57
+MARGIN               : 7
+NAV                  : 50
+OL                   : 52
+P                    : 58
+PADDING              : 12
+POINT_TEXT           : 31 32
+RIGHT                : 38
+SECTION              : 47
+SIZE                 : 10
+SRC                  : 42
+TABLE                : 55
+TD                   : 64
+TH                   : 63
+TITLE                : 83 94
+TOP                  : 35
+TR                   : 56
+UL                   : 51
+VALUE                : 7 8 9 10 11 12 13 14 15 16
+WIDTH                : 9 14
+error                : 
+
+Nonterminals, with rules where they appear
+
+a                    : 82
+article              : 72
+aside                : 71
+attribute            : 27 28 29 30
+body                 : 68
+caption              : 88
+class                : 91
+directions           : 7 12
+doc                  : 0
+empty                : 2 5 34
+footer               : 76
+h                    : 80
+head                 : 69
+header               : 77
+href                 : 92
+html                 : 67
+id                   : 90
+img                  : 81
+lang                 : 95
+li                   : 89
+link                 : 84
+nav                  : 73
+ol                   : 75
+p                    : 79
+rule                 : 6
+rules                : 4 6
+section              : 70
+selector             : 17 18
+selector_attribute   : 21
+selector_class       : 22
+selector_id          : 23
+selector_type        : 20
+selector_universal   : 19
+selectors            : 4 18
+src                  : 93
+style                : 3
+styles               : 1 3
+table                : 78
+td                   : 86
+th                   : 85
+tr                   : 87
+type                 : 25 26 26 29 30 32
+ul                   : 74
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . doc
+    (1) doc -> . styles
+    (2) styles -> . empty
+    (3) styles -> . styles style
+    (66) empty -> .
+
+    ASTERISK        reduce using rule 66 (empty -> .)
+    CURLY_INITIAL   reduce using rule 66 (empty -> .)
+    POINT_TEXT      reduce using rule 66 (empty -> .)
+    HASHTAG_TEXT    reduce using rule 66 (empty -> .)
+    TITLE           reduce using rule 66 (empty -> .)
+    HTML            reduce using rule 66 (empty -> .)
+    BODY            reduce using rule 66 (empty -> .)
+    HEAD            reduce using rule 66 (empty -> .)
+    SECTION         reduce using rule 66 (empty -> .)
+    ASIDE           reduce using rule 66 (empty -> .)
+    ARTICLE         reduce using rule 66 (empty -> .)
+    NAV             reduce using rule 66 (empty -> .)
+    UL              reduce using rule 66 (empty -> .)
+    OL              reduce using rule 66 (empty -> .)
+    FOOTER          reduce using rule 66 (empty -> .)
+    HEADER          reduce using rule 66 (empty -> .)
+    TABLE           reduce using rule 66 (empty -> .)
+    P               reduce using rule 66 (empty -> .)
+    H               reduce using rule 66 (empty -> .)
+    IMG             reduce using rule 66 (empty -> .)
+    A               reduce using rule 66 (empty -> .)
+    LINK            reduce using rule 66 (empty -> .)
+    TH              reduce using rule 66 (empty -> .)
+    TD              reduce using rule 66 (empty -> .)
+    TR              reduce using rule 66 (empty -> .)
+    CAPTION         reduce using rule 66 (empty -> .)
+    LI              reduce using rule 66 (empty -> .)
+    $end            reduce using rule 66 (empty -> .)
+
+    doc                            shift and go to state 1
+    styles                         shift and go to state 2
+    empty                          shift and go to state 3
+
+state 1
+
+    (0) S' -> doc .
+
+
+
+state 2
+
+    (1) doc -> styles .
+    (3) styles -> styles . style
+    (4) style -> . selectors BRACKET_INITIAL rules BRACKET_FINISH
+    (17) selectors -> . selector
+    (18) selectors -> . selectors COMA selector
+    (19) selector -> . selector_universal
+    (20) selector -> . selector_type
+    (21) selector -> . selector_attribute
+    (22) selector -> . selector_class
+    (23) selector -> . selector_id
+    (24) selector_universal -> . ASTERISK
+    (25) selector_type -> . type
+    (26) selector_type -> . type GREATER_THAN type
+    (27) selector_attribute -> . CURLY_INITIAL attribute CURLY_FINISH
+    (28) selector_attribute -> . CURLY_INITIAL attribute EQUAL_TEXT CURLY_FINISH
+    (29) selector_attribute -> . type CURLY_INITIAL attribute CURLY_FINISH
+    (30) selector_attribute -> . type CURLY_INITIAL attribute EQUAL_TEXT CURLY_FINISH
+    (31) selector_class -> . POINT_TEXT
+    (32) selector_class -> . type POINT_TEXT
+    (33) selector_id -> . HASHTAG_TEXT
+    (67) type -> . html
+    (68) type -> . body
+    (69) type -> . head
+    (70) type -> . section
+    (71) type -> . aside
+    (72) type -> . article
+    (73) type -> . nav
+    (74) type -> . ul
+    (75) type -> . ol
+    (76) type -> . footer
+    (77) type -> . header
+    (78) type -> . table
+    (79) type -> . p
+    (80) type -> . h
+    (81) type -> . img
+    (82) type -> . a
+    (83) type -> . TITLE
+    (84) type -> . link
+    (85) type -> . th
+    (86) type -> . td
+    (87) type -> . tr
+    (88) type -> . caption
+    (89) type -> . li
+    (44) html -> . HTML
+    (46) body -> . BODY
+    (45) head -> . HEAD
+    (47) section -> . SECTION
+    (48) aside -> . ASIDE
+    (49) article -> . ARTICLE
+    (50) nav -> . NAV
+    (51) ul -> . UL
+    (52) ol -> . OL
+    (53) footer -> . FOOTER
+    (54) header -> . HEADER
+    (55) table -> . TABLE
+    (58) p -> . P
+    (59) h -> . H
+    (61) img -> . IMG
+    (62) a -> . A
+    (57) link -> . LINK
+    (63) th -> . TH
+    (64) td -> . TD
+    (56) tr -> . TR
+    (65) caption -> . CAPTION
+    (60) li -> . LI
+
+    $end            reduce using rule 1 (doc -> styles .)
+    ASTERISK        shift and go to state 12
+    CURLY_INITIAL   shift and go to state 14
+    POINT_TEXT      shift and go to state 15
+    HASHTAG_TEXT    shift and go to state 16
+    TITLE           shift and go to state 33
+    HTML            shift and go to state 40
+    BODY            shift and go to state 41
+    HEAD            shift and go to state 42
+    SECTION         shift and go to state 43
+    ASIDE           shift and go to state 44
+    ARTICLE         shift and go to state 45
+    NAV             shift and go to state 46
+    UL              shift and go to state 47
+    OL              shift and go to state 48
+    FOOTER          shift and go to state 49
+    HEADER          shift and go to state 50
+    TABLE           shift and go to state 51
+    P               shift and go to state 52
+    H               shift and go to state 53
+    IMG             shift and go to state 54
+    A               shift and go to state 55
+    LINK            shift and go to state 56
+    TH              shift and go to state 57
+    TD              shift and go to state 58
+    TR              shift and go to state 59
+    CAPTION         shift and go to state 60
+    LI              shift and go to state 61
+
+    style                          shift and go to state 4
+    selectors                      shift and go to state 5
+    selector                       shift and go to state 6
+    selector_universal             shift and go to state 7
+    selector_type                  shift and go to state 8
+    selector_attribute             shift and go to state 9
+    selector_class                 shift and go to state 10
+    selector_id                    shift and go to state 11
+    type                           shift and go to state 13
+    html                           shift and go to state 17
+    body                           shift and go to state 18
+    head                           shift and go to state 19
+    section                        shift and go to state 20
+    aside                          shift and go to state 21
+    article                        shift and go to state 22
+    nav                            shift and go to state 23
+    ul                             shift and go to state 24
+    ol                             shift and go to state 25
+    footer                         shift and go to state 26
+    header                         shift and go to state 27
+    table                          shift and go to state 28
+    p                              shift and go to state 29
+    h                              shift and go to state 30
+    img                            shift and go to state 31
+    a                              shift and go to state 32
+    link                           shift and go to state 34
+    th                             shift and go to state 35
+    td                             shift and go to state 36
+    tr                             shift and go to state 37
+    caption                        shift and go to state 38
+    li                             shift and go to state 39
+
+state 3
+
+    (2) styles -> empty .
+
+    ASTERISK        reduce using rule 2 (styles -> empty .)
+    CURLY_INITIAL   reduce using rule 2 (styles -> empty .)
+    POINT_TEXT      reduce using rule 2 (styles -> empty .)
+    HASHTAG_TEXT    reduce using rule 2 (styles -> empty .)
+    TITLE           reduce using rule 2 (styles -> empty .)
+    HTML            reduce using rule 2 (styles -> empty .)
+    BODY            reduce using rule 2 (styles -> empty .)
+    HEAD            reduce using rule 2 (styles -> empty .)
+    SECTION         reduce using rule 2 (styles -> empty .)
+    ASIDE           reduce using rule 2 (styles -> empty .)
+    ARTICLE         reduce using rule 2 (styles -> empty .)
+    NAV             reduce using rule 2 (styles -> empty .)
+    UL              reduce using rule 2 (styles -> empty .)
+    OL              reduce using rule 2 (styles -> empty .)
+    FOOTER          reduce using rule 2 (styles -> empty .)
+    HEADER          reduce using rule 2 (styles -> empty .)
+    TABLE           reduce using rule 2 (styles -> empty .)
+    P               reduce using rule 2 (styles -> empty .)
+    H               reduce using rule 2 (styles -> empty .)
+    IMG             reduce using rule 2 (styles -> empty .)
+    A               reduce using rule 2 (styles -> empty .)
+    LINK            reduce using rule 2 (styles -> empty .)
+    TH              reduce using rule 2 (styles -> empty .)
+    TD              reduce using rule 2 (styles -> empty .)
+    TR              reduce using rule 2 (styles -> empty .)
+    CAPTION         reduce using rule 2 (styles -> empty .)
+    LI              reduce using rule 2 (styles -> empty .)
+    $end            reduce using rule 2 (styles -> empty .)
+
+
+state 4
+
+    (3) styles -> styles style .
+
+    ASTERISK        reduce using rule 3 (styles -> styles style .)
+    CURLY_INITIAL   reduce using rule 3 (styles -> styles style .)
+    POINT_TEXT      reduce using rule 3 (styles -> styles style .)
+    HASHTAG_TEXT    reduce using rule 3 (styles -> styles style .)
+    TITLE           reduce using rule 3 (styles -> styles style .)
+    HTML            reduce using rule 3 (styles -> styles style .)
+    BODY            reduce using rule 3 (styles -> styles style .)
+    HEAD            reduce using rule 3 (styles -> styles style .)
+    SECTION         reduce using rule 3 (styles -> styles style .)
+    ASIDE           reduce using rule 3 (styles -> styles style .)
+    ARTICLE         reduce using rule 3 (styles -> styles style .)
+    NAV             reduce using rule 3 (styles -> styles style .)
+    UL              reduce using rule 3 (styles -> styles style .)
+    OL              reduce using rule 3 (styles -> styles style .)
+    FOOTER          reduce using rule 3 (styles -> styles style .)
+    HEADER          reduce using rule 3 (styles -> styles style .)
+    TABLE           reduce using rule 3 (styles -> styles style .)
+    P               reduce using rule 3 (styles -> styles style .)
+    H               reduce using rule 3 (styles -> styles style .)
+    IMG             reduce using rule 3 (styles -> styles style .)
+    A               reduce using rule 3 (styles -> styles style .)
+    LINK            reduce using rule 3 (styles -> styles style .)
+    TH              reduce using rule 3 (styles -> styles style .)
+    TD              reduce using rule 3 (styles -> styles style .)
+    TR              reduce using rule 3 (styles -> styles style .)
+    CAPTION         reduce using rule 3 (styles -> styles style .)
+    LI              reduce using rule 3 (styles -> styles style .)
+    $end            reduce using rule 3 (styles -> styles style .)
+
+
+state 5
+
+    (4) style -> selectors . BRACKET_INITIAL rules BRACKET_FINISH
+    (18) selectors -> selectors . COMA selector
+
+    BRACKET_INITIAL shift and go to state 62
+    COMA            shift and go to state 63
+
+
+state 6
+
+    (17) selectors -> selector .
+
+    BRACKET_INITIAL reduce using rule 17 (selectors -> selector .)
+    COMA            reduce using rule 17 (selectors -> selector .)
+
+
+state 7
+
+    (19) selector -> selector_universal .
+
+    BRACKET_INITIAL reduce using rule 19 (selector -> selector_universal .)
+    COMA            reduce using rule 19 (selector -> selector_universal .)
+
+
+state 8
+
+    (20) selector -> selector_type .
+
+    BRACKET_INITIAL reduce using rule 20 (selector -> selector_type .)
+    COMA            reduce using rule 20 (selector -> selector_type .)
+
+
+state 9
+
+    (21) selector -> selector_attribute .
+
+    BRACKET_INITIAL reduce using rule 21 (selector -> selector_attribute .)
+    COMA            reduce using rule 21 (selector -> selector_attribute .)
+
+
+state 10
+
+    (22) selector -> selector_class .
+
+    BRACKET_INITIAL reduce using rule 22 (selector -> selector_class .)
+    COMA            reduce using rule 22 (selector -> selector_class .)
+
+
+state 11
+
+    (23) selector -> selector_id .
+
+    BRACKET_INITIAL reduce using rule 23 (selector -> selector_id .)
+    COMA            reduce using rule 23 (selector -> selector_id .)
+
+
+state 12
+
+    (24) selector_universal -> ASTERISK .
+
+    BRACKET_INITIAL reduce using rule 24 (selector_universal -> ASTERISK .)
+    COMA            reduce using rule 24 (selector_universal -> ASTERISK .)
+
+
+state 13
+
+    (25) selector_type -> type .
+    (26) selector_type -> type . GREATER_THAN type
+    (29) selector_attribute -> type . CURLY_INITIAL attribute CURLY_FINISH
+    (30) selector_attribute -> type . CURLY_INITIAL attribute EQUAL_TEXT CURLY_FINISH
+    (32) selector_class -> type . POINT_TEXT
+
+    BRACKET_INITIAL reduce using rule 25 (selector_type -> type .)
+    COMA            reduce using rule 25 (selector_type -> type .)
+    GREATER_THAN    shift and go to state 64
+    CURLY_INITIAL   shift and go to state 65
+    POINT_TEXT      shift and go to state 66
+
+
+state 14
+
+    (27) selector_attribute -> CURLY_INITIAL . attribute CURLY_FINISH
+    (28) selector_attribute -> CURLY_INITIAL . attribute EQUAL_TEXT CURLY_FINISH
+    (90) attribute -> . id
+    (91) attribute -> . class
+    (92) attribute -> . href
+    (93) attribute -> . src
+    (94) attribute -> . TITLE
+    (95) attribute -> . lang
+    (39) id -> . ID
+    (40) class -> . CLASS
+    (41) href -> . HREF
+    (42) src -> . SRC
+    (43) lang -> . LANG
+
+    TITLE           shift and go to state 72
+    ID              shift and go to state 74
+    CLASS           shift and go to state 75
+    HREF            shift and go to state 76
+    SRC             shift and go to state 77
+    LANG            shift and go to state 78
+
+    attribute                      shift and go to state 67
+    id                             shift and go to state 68
+    class                          shift and go to state 69
+    href                           shift and go to state 70
+    src                            shift and go to state 71
+    lang                           shift and go to state 73
+
+state 15
+
+    (31) selector_class -> POINT_TEXT .
+
+    BRACKET_INITIAL reduce using rule 31 (selector_class -> POINT_TEXT .)
+    COMA            reduce using rule 31 (selector_class -> POINT_TEXT .)
+
+
+state 16
+
+    (33) selector_id -> HASHTAG_TEXT .
+
+    BRACKET_INITIAL reduce using rule 33 (selector_id -> HASHTAG_TEXT .)
+    COMA            reduce using rule 33 (selector_id -> HASHTAG_TEXT .)
+
+
+state 17
+
+    (67) type -> html .
+
+    GREATER_THAN    reduce using rule 67 (type -> html .)
+    CURLY_INITIAL   reduce using rule 67 (type -> html .)
+    POINT_TEXT      reduce using rule 67 (type -> html .)
+    BRACKET_INITIAL reduce using rule 67 (type -> html .)
+    COMA            reduce using rule 67 (type -> html .)
+
+
+state 18
+
+    (68) type -> body .
+
+    GREATER_THAN    reduce using rule 68 (type -> body .)
+    CURLY_INITIAL   reduce using rule 68 (type -> body .)
+    POINT_TEXT      reduce using rule 68 (type -> body .)
+    BRACKET_INITIAL reduce using rule 68 (type -> body .)
+    COMA            reduce using rule 68 (type -> body .)
+
+
+state 19
+
+    (69) type -> head .
+
+    GREATER_THAN    reduce using rule 69 (type -> head .)
+    CURLY_INITIAL   reduce using rule 69 (type -> head .)
+    POINT_TEXT      reduce using rule 69 (type -> head .)
+    BRACKET_INITIAL reduce using rule 69 (type -> head .)
+    COMA            reduce using rule 69 (type -> head .)
+
+
+state 20
+
+    (70) type -> section .
+
+    GREATER_THAN    reduce using rule 70 (type -> section .)
+    CURLY_INITIAL   reduce using rule 70 (type -> section .)
+    POINT_TEXT      reduce using rule 70 (type -> section .)
+    BRACKET_INITIAL reduce using rule 70 (type -> section .)
+    COMA            reduce using rule 70 (type -> section .)
+
+
+state 21
+
+    (71) type -> aside .
+
+    GREATER_THAN    reduce using rule 71 (type -> aside .)
+    CURLY_INITIAL   reduce using rule 71 (type -> aside .)
+    POINT_TEXT      reduce using rule 71 (type -> aside .)
+    BRACKET_INITIAL reduce using rule 71 (type -> aside .)
+    COMA            reduce using rule 71 (type -> aside .)
+
+
+state 22
+
+    (72) type -> article .
+
+    GREATER_THAN    reduce using rule 72 (type -> article .)
+    CURLY_INITIAL   reduce using rule 72 (type -> article .)
+    POINT_TEXT      reduce using rule 72 (type -> article .)
+    BRACKET_INITIAL reduce using rule 72 (type -> article .)
+    COMA            reduce using rule 72 (type -> article .)
+
+
+state 23
+
+    (73) type -> nav .
+
+    GREATER_THAN    reduce using rule 73 (type -> nav .)
+    CURLY_INITIAL   reduce using rule 73 (type -> nav .)
+    POINT_TEXT      reduce using rule 73 (type -> nav .)
+    BRACKET_INITIAL reduce using rule 73 (type -> nav .)
+    COMA            reduce using rule 73 (type -> nav .)
+
+
+state 24
+
+    (74) type -> ul .
+
+    GREATER_THAN    reduce using rule 74 (type -> ul .)
+    CURLY_INITIAL   reduce using rule 74 (type -> ul .)
+    POINT_TEXT      reduce using rule 74 (type -> ul .)
+    BRACKET_INITIAL reduce using rule 74 (type -> ul .)
+    COMA            reduce using rule 74 (type -> ul .)
+
+
+state 25
+
+    (75) type -> ol .
+
+    GREATER_THAN    reduce using rule 75 (type -> ol .)
+    CURLY_INITIAL   reduce using rule 75 (type -> ol .)
+    POINT_TEXT      reduce using rule 75 (type -> ol .)
+    BRACKET_INITIAL reduce using rule 75 (type -> ol .)
+    COMA            reduce using rule 75 (type -> ol .)
+
+
+state 26
+
+    (76) type -> footer .
+
+    GREATER_THAN    reduce using rule 76 (type -> footer .)
+    CURLY_INITIAL   reduce using rule 76 (type -> footer .)
+    POINT_TEXT      reduce using rule 76 (type -> footer .)
+    BRACKET_INITIAL reduce using rule 76 (type -> footer .)
+    COMA            reduce using rule 76 (type -> footer .)
+
+
+state 27
+
+    (77) type -> header .
+
+    GREATER_THAN    reduce using rule 77 (type -> header .)
+    CURLY_INITIAL   reduce using rule 77 (type -> header .)
+    POINT_TEXT      reduce using rule 77 (type -> header .)
+    BRACKET_INITIAL reduce using rule 77 (type -> header .)
+    COMA            reduce using rule 77 (type -> header .)
+
+
+state 28
+
+    (78) type -> table .
+
+    GREATER_THAN    reduce using rule 78 (type -> table .)
+    CURLY_INITIAL   reduce using rule 78 (type -> table .)
+    POINT_TEXT      reduce using rule 78 (type -> table .)
+    BRACKET_INITIAL reduce using rule 78 (type -> table .)
+    COMA            reduce using rule 78 (type -> table .)
+
+
+state 29
+
+    (79) type -> p .
+
+    GREATER_THAN    reduce using rule 79 (type -> p .)
+    CURLY_INITIAL   reduce using rule 79 (type -> p .)
+    POINT_TEXT      reduce using rule 79 (type -> p .)
+    BRACKET_INITIAL reduce using rule 79 (type -> p .)
+    COMA            reduce using rule 79 (type -> p .)
+
+
+state 30
+
+    (80) type -> h .
+
+    GREATER_THAN    reduce using rule 80 (type -> h .)
+    CURLY_INITIAL   reduce using rule 80 (type -> h .)
+    POINT_TEXT      reduce using rule 80 (type -> h .)
+    BRACKET_INITIAL reduce using rule 80 (type -> h .)
+    COMA            reduce using rule 80 (type -> h .)
+
+
+state 31
+
+    (81) type -> img .
+
+    GREATER_THAN    reduce using rule 81 (type -> img .)
+    CURLY_INITIAL   reduce using rule 81 (type -> img .)
+    POINT_TEXT      reduce using rule 81 (type -> img .)
+    BRACKET_INITIAL reduce using rule 81 (type -> img .)
+    COMA            reduce using rule 81 (type -> img .)
+
+
+state 32
+
+    (82) type -> a .
+
+    GREATER_THAN    reduce using rule 82 (type -> a .)
+    CURLY_INITIAL   reduce using rule 82 (type -> a .)
+    POINT_TEXT      reduce using rule 82 (type -> a .)
+    BRACKET_INITIAL reduce using rule 82 (type -> a .)
+    COMA            reduce using rule 82 (type -> a .)
+
+
+state 33
+
+    (83) type -> TITLE .
+
+    GREATER_THAN    reduce using rule 83 (type -> TITLE .)
+    CURLY_INITIAL   reduce using rule 83 (type -> TITLE .)
+    POINT_TEXT      reduce using rule 83 (type -> TITLE .)
+    BRACKET_INITIAL reduce using rule 83 (type -> TITLE .)
+    COMA            reduce using rule 83 (type -> TITLE .)
+
+
+state 34
+
+    (84) type -> link .
+
+    GREATER_THAN    reduce using rule 84 (type -> link .)
+    CURLY_INITIAL   reduce using rule 84 (type -> link .)
+    POINT_TEXT      reduce using rule 84 (type -> link .)
+    BRACKET_INITIAL reduce using rule 84 (type -> link .)
+    COMA            reduce using rule 84 (type -> link .)
+
+
+state 35
+
+    (85) type -> th .
+
+    GREATER_THAN    reduce using rule 85 (type -> th .)
+    CURLY_INITIAL   reduce using rule 85 (type -> th .)
+    POINT_TEXT      reduce using rule 85 (type -> th .)
+    BRACKET_INITIAL reduce using rule 85 (type -> th .)
+    COMA            reduce using rule 85 (type -> th .)
+
+
+state 36
+
+    (86) type -> td .
+
+    GREATER_THAN    reduce using rule 86 (type -> td .)
+    CURLY_INITIAL   reduce using rule 86 (type -> td .)
+    POINT_TEXT      reduce using rule 86 (type -> td .)
+    BRACKET_INITIAL reduce using rule 86 (type -> td .)
+    COMA            reduce using rule 86 (type -> td .)
+
+
+state 37
+
+    (87) type -> tr .
+
+    GREATER_THAN    reduce using rule 87 (type -> tr .)
+    CURLY_INITIAL   reduce using rule 87 (type -> tr .)
+    POINT_TEXT      reduce using rule 87 (type -> tr .)
+    BRACKET_INITIAL reduce using rule 87 (type -> tr .)
+    COMA            reduce using rule 87 (type -> tr .)
+
+
+state 38
+
+    (88) type -> caption .
+
+    GREATER_THAN    reduce using rule 88 (type -> caption .)
+    CURLY_INITIAL   reduce using rule 88 (type -> caption .)
+    POINT_TEXT      reduce using rule 88 (type -> caption .)
+    BRACKET_INITIAL reduce using rule 88 (type -> caption .)
+    COMA            reduce using rule 88 (type -> caption .)
+
+
+state 39
+
+    (89) type -> li .
+
+    GREATER_THAN    reduce using rule 89 (type -> li .)
+    CURLY_INITIAL   reduce using rule 89 (type -> li .)
+    POINT_TEXT      reduce using rule 89 (type -> li .)
+    BRACKET_INITIAL reduce using rule 89 (type -> li .)
+    COMA            reduce using rule 89 (type -> li .)
+
+
+state 40
+
+    (44) html -> HTML .
+
+    GREATER_THAN    reduce using rule 44 (html -> HTML .)
+    CURLY_INITIAL   reduce using rule 44 (html -> HTML .)
+    POINT_TEXT      reduce using rule 44 (html -> HTML .)
+    BRACKET_INITIAL reduce using rule 44 (html -> HTML .)
+    COMA            reduce using rule 44 (html -> HTML .)
+
+
+state 41
+
+    (46) body -> BODY .
+
+    GREATER_THAN    reduce using rule 46 (body -> BODY .)
+    CURLY_INITIAL   reduce using rule 46 (body -> BODY .)
+    POINT_TEXT      reduce using rule 46 (body -> BODY .)
+    BRACKET_INITIAL reduce using rule 46 (body -> BODY .)
+    COMA            reduce using rule 46 (body -> BODY .)
+
+
+state 42
+
+    (45) head -> HEAD .
+
+    GREATER_THAN    reduce using rule 45 (head -> HEAD .)
+    CURLY_INITIAL   reduce using rule 45 (head -> HEAD .)
+    POINT_TEXT      reduce using rule 45 (head -> HEAD .)
+    BRACKET_INITIAL reduce using rule 45 (head -> HEAD .)
+    COMA            reduce using rule 45 (head -> HEAD .)
+
+
+state 43
+
+    (47) section -> SECTION .
+
+    GREATER_THAN    reduce using rule 47 (section -> SECTION .)
+    CURLY_INITIAL   reduce using rule 47 (section -> SECTION .)
+    POINT_TEXT      reduce using rule 47 (section -> SECTION .)
+    BRACKET_INITIAL reduce using rule 47 (section -> SECTION .)
+    COMA            reduce using rule 47 (section -> SECTION .)
+
+
+state 44
+
+    (48) aside -> ASIDE .
+
+    GREATER_THAN    reduce using rule 48 (aside -> ASIDE .)
+    CURLY_INITIAL   reduce using rule 48 (aside -> ASIDE .)
+    POINT_TEXT      reduce using rule 48 (aside -> ASIDE .)
+    BRACKET_INITIAL reduce using rule 48 (aside -> ASIDE .)
+    COMA            reduce using rule 48 (aside -> ASIDE .)
+
+
+state 45
+
+    (49) article -> ARTICLE .
+
+    GREATER_THAN    reduce using rule 49 (article -> ARTICLE .)
+    CURLY_INITIAL   reduce using rule 49 (article -> ARTICLE .)
+    POINT_TEXT      reduce using rule 49 (article -> ARTICLE .)
+    BRACKET_INITIAL reduce using rule 49 (article -> ARTICLE .)
+    COMA            reduce using rule 49 (article -> ARTICLE .)
+
+
+state 46
+
+    (50) nav -> NAV .
+
+    GREATER_THAN    reduce using rule 50 (nav -> NAV .)
+    CURLY_INITIAL   reduce using rule 50 (nav -> NAV .)
+    POINT_TEXT      reduce using rule 50 (nav -> NAV .)
+    BRACKET_INITIAL reduce using rule 50 (nav -> NAV .)
+    COMA            reduce using rule 50 (nav -> NAV .)
+
+
+state 47
+
+    (51) ul -> UL .
+
+    GREATER_THAN    reduce using rule 51 (ul -> UL .)
+    CURLY_INITIAL   reduce using rule 51 (ul -> UL .)
+    POINT_TEXT      reduce using rule 51 (ul -> UL .)
+    BRACKET_INITIAL reduce using rule 51 (ul -> UL .)
+    COMA            reduce using rule 51 (ul -> UL .)
+
+
+state 48
+
+    (52) ol -> OL .
+
+    GREATER_THAN    reduce using rule 52 (ol -> OL .)
+    CURLY_INITIAL   reduce using rule 52 (ol -> OL .)
+    POINT_TEXT      reduce using rule 52 (ol -> OL .)
+    BRACKET_INITIAL reduce using rule 52 (ol -> OL .)
+    COMA            reduce using rule 52 (ol -> OL .)
+
+
+state 49
+
+    (53) footer -> FOOTER .
+
+    GREATER_THAN    reduce using rule 53 (footer -> FOOTER .)
+    CURLY_INITIAL   reduce using rule 53 (footer -> FOOTER .)
+    POINT_TEXT      reduce using rule 53 (footer -> FOOTER .)
+    BRACKET_INITIAL reduce using rule 53 (footer -> FOOTER .)
+    COMA            reduce using rule 53 (footer -> FOOTER .)
+
+
+state 50
+
+    (54) header -> HEADER .
+
+    GREATER_THAN    reduce using rule 54 (header -> HEADER .)
+    CURLY_INITIAL   reduce using rule 54 (header -> HEADER .)
+    POINT_TEXT      reduce using rule 54 (header -> HEADER .)
+    BRACKET_INITIAL reduce using rule 54 (header -> HEADER .)
+    COMA            reduce using rule 54 (header -> HEADER .)
+
+
+state 51
+
+    (55) table -> TABLE .
+
+    GREATER_THAN    reduce using rule 55 (table -> TABLE .)
+    CURLY_INITIAL   reduce using rule 55 (table -> TABLE .)
+    POINT_TEXT      reduce using rule 55 (table -> TABLE .)
+    BRACKET_INITIAL reduce using rule 55 (table -> TABLE .)
+    COMA            reduce using rule 55 (table -> TABLE .)
+
+
+state 52
+
+    (58) p -> P .
+
+    GREATER_THAN    reduce using rule 58 (p -> P .)
+    CURLY_INITIAL   reduce using rule 58 (p -> P .)
+    POINT_TEXT      reduce using rule 58 (p -> P .)
+    BRACKET_INITIAL reduce using rule 58 (p -> P .)
+    COMA            reduce using rule 58 (p -> P .)
+
+
+state 53
+
+    (59) h -> H .
+
+    GREATER_THAN    reduce using rule 59 (h -> H .)
+    CURLY_INITIAL   reduce using rule 59 (h -> H .)
+    POINT_TEXT      reduce using rule 59 (h -> H .)
+    BRACKET_INITIAL reduce using rule 59 (h -> H .)
+    COMA            reduce using rule 59 (h -> H .)
+
+
+state 54
+
+    (61) img -> IMG .
+
+    GREATER_THAN    reduce using rule 61 (img -> IMG .)
+    CURLY_INITIAL   reduce using rule 61 (img -> IMG .)
+    POINT_TEXT      reduce using rule 61 (img -> IMG .)
+    BRACKET_INITIAL reduce using rule 61 (img -> IMG .)
+    COMA            reduce using rule 61 (img -> IMG .)
+
+
+state 55
+
+    (62) a -> A .
+
+    GREATER_THAN    reduce using rule 62 (a -> A .)
+    CURLY_INITIAL   reduce using rule 62 (a -> A .)
+    POINT_TEXT      reduce using rule 62 (a -> A .)
+    BRACKET_INITIAL reduce using rule 62 (a -> A .)
+    COMA            reduce using rule 62 (a -> A .)
+
+
+state 56
+
+    (57) link -> LINK .
+
+    GREATER_THAN    reduce using rule 57 (link -> LINK .)
+    CURLY_INITIAL   reduce using rule 57 (link -> LINK .)
+    POINT_TEXT      reduce using rule 57 (link -> LINK .)
+    BRACKET_INITIAL reduce using rule 57 (link -> LINK .)
+    COMA            reduce using rule 57 (link -> LINK .)
+
+
+state 57
+
+    (63) th -> TH .
+
+    GREATER_THAN    reduce using rule 63 (th -> TH .)
+    CURLY_INITIAL   reduce using rule 63 (th -> TH .)
+    POINT_TEXT      reduce using rule 63 (th -> TH .)
+    BRACKET_INITIAL reduce using rule 63 (th -> TH .)
+    COMA            reduce using rule 63 (th -> TH .)
+
+
+state 58
+
+    (64) td -> TD .
+
+    GREATER_THAN    reduce using rule 64 (td -> TD .)
+    CURLY_INITIAL   reduce using rule 64 (td -> TD .)
+    POINT_TEXT      reduce using rule 64 (td -> TD .)
+    BRACKET_INITIAL reduce using rule 64 (td -> TD .)
+    COMA            reduce using rule 64 (td -> TD .)
+
+
+state 59
+
+    (56) tr -> TR .
+
+    GREATER_THAN    reduce using rule 56 (tr -> TR .)
+    CURLY_INITIAL   reduce using rule 56 (tr -> TR .)
+    POINT_TEXT      reduce using rule 56 (tr -> TR .)
+    BRACKET_INITIAL reduce using rule 56 (tr -> TR .)
+    COMA            reduce using rule 56 (tr -> TR .)
+
+
+state 60
+
+    (65) caption -> CAPTION .
+
+    GREATER_THAN    reduce using rule 65 (caption -> CAPTION .)
+    CURLY_INITIAL   reduce using rule 65 (caption -> CAPTION .)
+    POINT_TEXT      reduce using rule 65 (caption -> CAPTION .)
+    BRACKET_INITIAL reduce using rule 65 (caption -> CAPTION .)
+    COMA            reduce using rule 65 (caption -> CAPTION .)
+
+
+state 61
+
+    (60) li -> LI .
+
+    GREATER_THAN    reduce using rule 60 (li -> LI .)
+    CURLY_INITIAL   reduce using rule 60 (li -> LI .)
+    POINT_TEXT      reduce using rule 60 (li -> LI .)
+    BRACKET_INITIAL reduce using rule 60 (li -> LI .)
+    COMA            reduce using rule 60 (li -> LI .)
+
+
+state 62
+
+    (4) style -> selectors BRACKET_INITIAL . rules BRACKET_FINISH
+    (5) rules -> . empty
+    (6) rules -> . rules rule
+    (66) empty -> .
+
+    BRACKET_FINISH  reduce using rule 66 (empty -> .)
+    MARGIN          reduce using rule 66 (empty -> .)
+    BORDER          reduce using rule 66 (empty -> .)
+    FONT            reduce using rule 66 (empty -> .)
+    PADDING         reduce using rule 66 (empty -> .)
+    HEIGHT          reduce using rule 66 (empty -> .)
+    WIDTH           reduce using rule 66 (empty -> .)
+    BACKGROUND      reduce using rule 66 (empty -> .)
+    COLUMNS         reduce using rule 66 (empty -> .)
+
+    rules                          shift and go to state 79
+    empty                          shift and go to state 80
+
+state 63
+
+    (18) selectors -> selectors COMA . selector
+    (19) selector -> . selector_universal
+    (20) selector -> . selector_type
+    (21) selector -> . selector_attribute
+    (22) selector -> . selector_class
+    (23) selector -> . selector_id
+    (24) selector_universal -> . ASTERISK
+    (25) selector_type -> . type
+    (26) selector_type -> . type GREATER_THAN type
+    (27) selector_attribute -> . CURLY_INITIAL attribute CURLY_FINISH
+    (28) selector_attribute -> . CURLY_INITIAL attribute EQUAL_TEXT CURLY_FINISH
+    (29) selector_attribute -> . type CURLY_INITIAL attribute CURLY_FINISH
+    (30) selector_attribute -> . type CURLY_INITIAL attribute EQUAL_TEXT CURLY_FINISH
+    (31) selector_class -> . POINT_TEXT
+    (32) selector_class -> . type POINT_TEXT
+    (33) selector_id -> . HASHTAG_TEXT
+    (67) type -> . html
+    (68) type -> . body
+    (69) type -> . head
+    (70) type -> . section
+    (71) type -> . aside
+    (72) type -> . article
+    (73) type -> . nav
+    (74) type -> . ul
+    (75) type -> . ol
+    (76) type -> . footer
+    (77) type -> . header
+    (78) type -> . table
+    (79) type -> . p
+    (80) type -> . h
+    (81) type -> . img
+    (82) type -> . a
+    (83) type -> . TITLE
+    (84) type -> . link
+    (85) type -> . th
+    (86) type -> . td
+    (87) type -> . tr
+    (88) type -> . caption
+    (89) type -> . li
+    (44) html -> . HTML
+    (46) body -> . BODY
+    (45) head -> . HEAD
+    (47) section -> . SECTION
+    (48) aside -> . ASIDE
+    (49) article -> . ARTICLE
+    (50) nav -> . NAV
+    (51) ul -> . UL
+    (52) ol -> . OL
+    (53) footer -> . FOOTER
+    (54) header -> . HEADER
+    (55) table -> . TABLE
+    (58) p -> . P
+    (59) h -> . H
+    (61) img -> . IMG
+    (62) a -> . A
+    (57) link -> . LINK
+    (63) th -> . TH
+    (64) td -> . TD
+    (56) tr -> . TR
+    (65) caption -> . CAPTION
+    (60) li -> . LI
+
+    ASTERISK        shift and go to state 12
+    CURLY_INITIAL   shift and go to state 14
+    POINT_TEXT      shift and go to state 15
+    HASHTAG_TEXT    shift and go to state 16
+    TITLE           shift and go to state 33
+    HTML            shift and go to state 40
+    BODY            shift and go to state 41
+    HEAD            shift and go to state 42
+    SECTION         shift and go to state 43
+    ASIDE           shift and go to state 44
+    ARTICLE         shift and go to state 45
+    NAV             shift and go to state 46
+    UL              shift and go to state 47
+    OL              shift and go to state 48
+    FOOTER          shift and go to state 49
+    HEADER          shift and go to state 50
+    TABLE           shift and go to state 51
+    P               shift and go to state 52
+    H               shift and go to state 53
+    IMG             shift and go to state 54
+    A               shift and go to state 55
+    LINK            shift and go to state 56
+    TH              shift and go to state 57
+    TD              shift and go to state 58
+    TR              shift and go to state 59
+    CAPTION         shift and go to state 60
+    LI              shift and go to state 61
+
+    selector                       shift and go to state 81
+    selector_universal             shift and go to state 7
+    selector_type                  shift and go to state 8
+    selector_attribute             shift and go to state 9
+    selector_class                 shift and go to state 10
+    selector_id                    shift and go to state 11
+    type                           shift and go to state 13
+    html                           shift and go to state 17
+    body                           shift and go to state 18
+    head                           shift and go to state 19
+    section                        shift and go to state 20
+    aside                          shift and go to state 21
+    article                        shift and go to state 22
+    nav                            shift and go to state 23
+    ul                             shift and go to state 24
+    ol                             shift and go to state 25
+    footer                         shift and go to state 26
+    header                         shift and go to state 27
+    table                          shift and go to state 28
+    p                              shift and go to state 29
+    h                              shift and go to state 30
+    img                            shift and go to state 31
+    a                              shift and go to state 32
+    link                           shift and go to state 34
+    th                             shift and go to state 35
+    td                             shift and go to state 36
+    tr                             shift and go to state 37
+    caption                        shift and go to state 38
+    li                             shift and go to state 39
+
+state 64
+
+    (26) selector_type -> type GREATER_THAN . type
+    (67) type -> . html
+    (68) type -> . body
+    (69) type -> . head
+    (70) type -> . section
+    (71) type -> . aside
+    (72) type -> . article
+    (73) type -> . nav
+    (74) type -> . ul
+    (75) type -> . ol
+    (76) type -> . footer
+    (77) type -> . header
+    (78) type -> . table
+    (79) type -> . p
+    (80) type -> . h
+    (81) type -> . img
+    (82) type -> . a
+    (83) type -> . TITLE
+    (84) type -> . link
+    (85) type -> . th
+    (86) type -> . td
+    (87) type -> . tr
+    (88) type -> . caption
+    (89) type -> . li
+    (44) html -> . HTML
+    (46) body -> . BODY
+    (45) head -> . HEAD
+    (47) section -> . SECTION
+    (48) aside -> . ASIDE
+    (49) article -> . ARTICLE
+    (50) nav -> . NAV
+    (51) ul -> . UL
+    (52) ol -> . OL
+    (53) footer -> . FOOTER
+    (54) header -> . HEADER
+    (55) table -> . TABLE
+    (58) p -> . P
+    (59) h -> . H
+    (61) img -> . IMG
+    (62) a -> . A
+    (57) link -> . LINK
+    (63) th -> . TH
+    (64) td -> . TD
+    (56) tr -> . TR
+    (65) caption -> . CAPTION
+    (60) li -> . LI
+
+    TITLE           shift and go to state 33
+    HTML            shift and go to state 40
+    BODY            shift and go to state 41
+    HEAD            shift and go to state 42
+    SECTION         shift and go to state 43
+    ASIDE           shift and go to state 44
+    ARTICLE         shift and go to state 45
+    NAV             shift and go to state 46
+    UL              shift and go to state 47
+    OL              shift and go to state 48
+    FOOTER          shift and go to state 49
+    HEADER          shift and go to state 50
+    TABLE           shift and go to state 51
+    P               shift and go to state 52
+    H               shift and go to state 53
+    IMG             shift and go to state 54
+    A               shift and go to state 55
+    LINK            shift and go to state 56
+    TH              shift and go to state 57
+    TD              shift and go to state 58
+    TR              shift and go to state 59
+    CAPTION         shift and go to state 60
+    LI              shift and go to state 61
+
+    type                           shift and go to state 82
+    html                           shift and go to state 17
+    body                           shift and go to state 18
+    head                           shift and go to state 19
+    section                        shift and go to state 20
+    aside                          shift and go to state 21
+    article                        shift and go to state 22
+    nav                            shift and go to state 23
+    ul                             shift and go to state 24
+    ol                             shift and go to state 25
+    footer                         shift and go to state 26
+    header                         shift and go to state 27
+    table                          shift and go to state 28
+    p                              shift and go to state 29
+    h                              shift and go to state 30
+    img                            shift and go to state 31
+    a                              shift and go to state 32
+    link                           shift and go to state 34
+    th                             shift and go to state 35
+    td                             shift and go to state 36
+    tr                             shift and go to state 37
+    caption                        shift and go to state 38
+    li                             shift and go to state 39
+
+state 65
+
+    (29) selector_attribute -> type CURLY_INITIAL . attribute CURLY_FINISH
+    (30) selector_attribute -> type CURLY_INITIAL . attribute EQUAL_TEXT CURLY_FINISH
+    (90) attribute -> . id
+    (91) attribute -> . class
+    (92) attribute -> . href
+    (93) attribute -> . src
+    (94) attribute -> . TITLE
+    (95) attribute -> . lang
+    (39) id -> . ID
+    (40) class -> . CLASS
+    (41) href -> . HREF
+    (42) src -> . SRC
+    (43) lang -> . LANG
+
+    TITLE           shift and go to state 72
+    ID              shift and go to state 74
+    CLASS           shift and go to state 75
+    HREF            shift and go to state 76
+    SRC             shift and go to state 77
+    LANG            shift and go to state 78
+
+    attribute                      shift and go to state 83
+    id                             shift and go to state 68
+    class                          shift and go to state 69
+    href                           shift and go to state 70
+    src                            shift and go to state 71
+    lang                           shift and go to state 73
+
+state 66
+
+    (32) selector_class -> type POINT_TEXT .
+
+    BRACKET_INITIAL reduce using rule 32 (selector_class -> type POINT_TEXT .)
+    COMA            reduce using rule 32 (selector_class -> type POINT_TEXT .)
+
+
+state 67
+
+    (27) selector_attribute -> CURLY_INITIAL attribute . CURLY_FINISH
+    (28) selector_attribute -> CURLY_INITIAL attribute . EQUAL_TEXT CURLY_FINISH
+
+    CURLY_FINISH    shift and go to state 84
+    EQUAL_TEXT      shift and go to state 85
+
+
+state 68
+
+    (90) attribute -> id .
+
+    CURLY_FINISH    reduce using rule 90 (attribute -> id .)
+    EQUAL_TEXT      reduce using rule 90 (attribute -> id .)
+
+
+state 69
+
+    (91) attribute -> class .
+
+    CURLY_FINISH    reduce using rule 91 (attribute -> class .)
+    EQUAL_TEXT      reduce using rule 91 (attribute -> class .)
+
+
+state 70
+
+    (92) attribute -> href .
+
+    CURLY_FINISH    reduce using rule 92 (attribute -> href .)
+    EQUAL_TEXT      reduce using rule 92 (attribute -> href .)
+
+
+state 71
+
+    (93) attribute -> src .
+
+    CURLY_FINISH    reduce using rule 93 (attribute -> src .)
+    EQUAL_TEXT      reduce using rule 93 (attribute -> src .)
+
+
+state 72
+
+    (94) attribute -> TITLE .
+
+    CURLY_FINISH    reduce using rule 94 (attribute -> TITLE .)
+    EQUAL_TEXT      reduce using rule 94 (attribute -> TITLE .)
+
+
+state 73
+
+    (95) attribute -> lang .
+
+    CURLY_FINISH    reduce using rule 95 (attribute -> lang .)
+    EQUAL_TEXT      reduce using rule 95 (attribute -> lang .)
+
+
+state 74
+
+    (39) id -> ID .
+
+    CURLY_FINISH    reduce using rule 39 (id -> ID .)
+    EQUAL_TEXT      reduce using rule 39 (id -> ID .)
+
+
+state 75
+
+    (40) class -> CLASS .
+
+    CURLY_FINISH    reduce using rule 40 (class -> CLASS .)
+    EQUAL_TEXT      reduce using rule 40 (class -> CLASS .)
+
+
+state 76
+
+    (41) href -> HREF .
+
+    CURLY_FINISH    reduce using rule 41 (href -> HREF .)
+    EQUAL_TEXT      reduce using rule 41 (href -> HREF .)
+
+
+state 77
+
+    (42) src -> SRC .
+
+    CURLY_FINISH    reduce using rule 42 (src -> SRC .)
+    EQUAL_TEXT      reduce using rule 42 (src -> SRC .)
+
+
+state 78
+
+    (43) lang -> LANG .
+
+    CURLY_FINISH    reduce using rule 43 (lang -> LANG .)
+    EQUAL_TEXT      reduce using rule 43 (lang -> LANG .)
+
+
+state 79
+
+    (4) style -> selectors BRACKET_INITIAL rules . BRACKET_FINISH
+    (6) rules -> rules . rule
+    (7) rule -> . MARGIN directions VALUE
+    (8) rule -> . BORDER DASH COLOR VALUE
+    (9) rule -> . BORDER DASH WIDTH VALUE
+    (10) rule -> . FONT DASH SIZE VALUE
+    (11) rule -> . FONT DASH COLOR VALUE
+    (12) rule -> . PADDING directions VALUE
+    (13) rule -> . HEIGHT VALUE
+    (14) rule -> . WIDTH VALUE
+    (15) rule -> . BACKGROUND VALUE
+    (16) rule -> . COLUMNS VALUE
+
+    BRACKET_FINISH  shift and go to state 86
+    MARGIN          shift and go to state 88
+    BORDER          shift and go to state 89
+    FONT            shift and go to state 91
+    PADDING         shift and go to state 92
+    HEIGHT          shift and go to state 93
+    WIDTH           shift and go to state 90
+    BACKGROUND      shift and go to state 94
+    COLUMNS         shift and go to state 95
+
+    rule                           shift and go to state 87
+
+state 80
+
+    (5) rules -> empty .
+
+    BRACKET_FINISH  reduce using rule 5 (rules -> empty .)
+    MARGIN          reduce using rule 5 (rules -> empty .)
+    BORDER          reduce using rule 5 (rules -> empty .)
+    FONT            reduce using rule 5 (rules -> empty .)
+    PADDING         reduce using rule 5 (rules -> empty .)
+    HEIGHT          reduce using rule 5 (rules -> empty .)
+    WIDTH           reduce using rule 5 (rules -> empty .)
+    BACKGROUND      reduce using rule 5 (rules -> empty .)
+    COLUMNS         reduce using rule 5 (rules -> empty .)
+
+
+state 81
+
+    (18) selectors -> selectors COMA selector .
+
+    BRACKET_INITIAL reduce using rule 18 (selectors -> selectors COMA selector .)
+    COMA            reduce using rule 18 (selectors -> selectors COMA selector .)
+
+
+state 82
+
+    (26) selector_type -> type GREATER_THAN type .
+
+    BRACKET_INITIAL reduce using rule 26 (selector_type -> type GREATER_THAN type .)
+    COMA            reduce using rule 26 (selector_type -> type GREATER_THAN type .)
+
+
+state 83
+
+    (29) selector_attribute -> type CURLY_INITIAL attribute . CURLY_FINISH
+    (30) selector_attribute -> type CURLY_INITIAL attribute . EQUAL_TEXT CURLY_FINISH
+
+    CURLY_FINISH    shift and go to state 96
+    EQUAL_TEXT      shift and go to state 97
+
+
+state 84
+
+    (27) selector_attribute -> CURLY_INITIAL attribute CURLY_FINISH .
+
+    BRACKET_INITIAL reduce using rule 27 (selector_attribute -> CURLY_INITIAL attribute CURLY_FINISH .)
+    COMA            reduce using rule 27 (selector_attribute -> CURLY_INITIAL attribute CURLY_FINISH .)
+
+
+state 85
+
+    (28) selector_attribute -> CURLY_INITIAL attribute EQUAL_TEXT . CURLY_FINISH
+
+    CURLY_FINISH    shift and go to state 98
+
+
+state 86
+
+    (4) style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .
+
+    ASTERISK        reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    CURLY_INITIAL   reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    POINT_TEXT      reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    HASHTAG_TEXT    reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    TITLE           reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    HTML            reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    BODY            reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    HEAD            reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    SECTION         reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    ASIDE           reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    ARTICLE         reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    NAV             reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    UL              reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    OL              reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    FOOTER          reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    HEADER          reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    TABLE           reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    P               reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    H               reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    IMG             reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    A               reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    LINK            reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    TH              reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    TD              reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    TR              reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    CAPTION         reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    LI              reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+    $end            reduce using rule 4 (style -> selectors BRACKET_INITIAL rules BRACKET_FINISH .)
+
+
+state 87
+
+    (6) rules -> rules rule .
+
+    BRACKET_FINISH  reduce using rule 6 (rules -> rules rule .)
+    MARGIN          reduce using rule 6 (rules -> rules rule .)
+    BORDER          reduce using rule 6 (rules -> rules rule .)
+    FONT            reduce using rule 6 (rules -> rules rule .)
+    PADDING         reduce using rule 6 (rules -> rules rule .)
+    HEIGHT          reduce using rule 6 (rules -> rules rule .)
+    WIDTH           reduce using rule 6 (rules -> rules rule .)
+    BACKGROUND      reduce using rule 6 (rules -> rules rule .)
+    COLUMNS         reduce using rule 6 (rules -> rules rule .)
+
+
+state 88
+
+    (7) rule -> MARGIN . directions VALUE
+    (34) directions -> . empty
+    (35) directions -> . DASH TOP
+    (36) directions -> . DASH BOTTOM
+    (37) directions -> . DASH LEFT
+    (38) directions -> . DASH RIGHT
+    (66) empty -> .
+
+    DASH            shift and go to state 101
+    VALUE           reduce using rule 66 (empty -> .)
+
+    directions                     shift and go to state 99
+    empty                          shift and go to state 100
+
+state 89
+
+    (8) rule -> BORDER . DASH COLOR VALUE
+    (9) rule -> BORDER . DASH WIDTH VALUE
+
+    DASH            shift and go to state 102
+
+
+state 90
+
+    (14) rule -> WIDTH . VALUE
+
+    VALUE           shift and go to state 103
+
+
+state 91
+
+    (10) rule -> FONT . DASH SIZE VALUE
+    (11) rule -> FONT . DASH COLOR VALUE
+
+    DASH            shift and go to state 104
+
+
+state 92
+
+    (12) rule -> PADDING . directions VALUE
+    (34) directions -> . empty
+    (35) directions -> . DASH TOP
+    (36) directions -> . DASH BOTTOM
+    (37) directions -> . DASH LEFT
+    (38) directions -> . DASH RIGHT
+    (66) empty -> .
+
+    DASH            shift and go to state 101
+    VALUE           reduce using rule 66 (empty -> .)
+
+    directions                     shift and go to state 105
+    empty                          shift and go to state 100
+
+state 93
+
+    (13) rule -> HEIGHT . VALUE
+
+    VALUE           shift and go to state 106
+
+
+state 94
+
+    (15) rule -> BACKGROUND . VALUE
+
+    VALUE           shift and go to state 107
+
+
+state 95
+
+    (16) rule -> COLUMNS . VALUE
+
+    VALUE           shift and go to state 108
+
+
+state 96
+
+    (29) selector_attribute -> type CURLY_INITIAL attribute CURLY_FINISH .
+
+    BRACKET_INITIAL reduce using rule 29 (selector_attribute -> type CURLY_INITIAL attribute CURLY_FINISH .)
+    COMA            reduce using rule 29 (selector_attribute -> type CURLY_INITIAL attribute CURLY_FINISH .)
+
+
+state 97
+
+    (30) selector_attribute -> type CURLY_INITIAL attribute EQUAL_TEXT . CURLY_FINISH
+
+    CURLY_FINISH    shift and go to state 109
+
+
+state 98
+
+    (28) selector_attribute -> CURLY_INITIAL attribute EQUAL_TEXT CURLY_FINISH .
+
+    BRACKET_INITIAL reduce using rule 28 (selector_attribute -> CURLY_INITIAL attribute EQUAL_TEXT CURLY_FINISH .)
+    COMA            reduce using rule 28 (selector_attribute -> CURLY_INITIAL attribute EQUAL_TEXT CURLY_FINISH .)
+
+
+state 99
+
+    (7) rule -> MARGIN directions . VALUE
+
+    VALUE           shift and go to state 110
+
+
+state 100
+
+    (34) directions -> empty .
+
+    VALUE           reduce using rule 34 (directions -> empty .)
+
+
+state 101
+
+    (35) directions -> DASH . TOP
+    (36) directions -> DASH . BOTTOM
+    (37) directions -> DASH . LEFT
+    (38) directions -> DASH . RIGHT
+
+    TOP             shift and go to state 111
+    BOTTOM          shift and go to state 112
+    LEFT            shift and go to state 113
+    RIGHT           shift and go to state 114
+
+
+state 102
+
+    (8) rule -> BORDER DASH . COLOR VALUE
+    (9) rule -> BORDER DASH . WIDTH VALUE
+
+    COLOR           shift and go to state 115
+    WIDTH           shift and go to state 116
+
+
+state 103
+
+    (14) rule -> WIDTH VALUE .
+
+    BRACKET_FINISH  reduce using rule 14 (rule -> WIDTH VALUE .)
+    MARGIN          reduce using rule 14 (rule -> WIDTH VALUE .)
+    BORDER          reduce using rule 14 (rule -> WIDTH VALUE .)
+    FONT            reduce using rule 14 (rule -> WIDTH VALUE .)
+    PADDING         reduce using rule 14 (rule -> WIDTH VALUE .)
+    HEIGHT          reduce using rule 14 (rule -> WIDTH VALUE .)
+    WIDTH           reduce using rule 14 (rule -> WIDTH VALUE .)
+    BACKGROUND      reduce using rule 14 (rule -> WIDTH VALUE .)
+    COLUMNS         reduce using rule 14 (rule -> WIDTH VALUE .)
+
+
+state 104
+
+    (10) rule -> FONT DASH . SIZE VALUE
+    (11) rule -> FONT DASH . COLOR VALUE
+
+    SIZE            shift and go to state 117
+    COLOR           shift and go to state 118
+
+
+state 105
+
+    (12) rule -> PADDING directions . VALUE
+
+    VALUE           shift and go to state 119
+
+
+state 106
+
+    (13) rule -> HEIGHT VALUE .
+
+    BRACKET_FINISH  reduce using rule 13 (rule -> HEIGHT VALUE .)
+    MARGIN          reduce using rule 13 (rule -> HEIGHT VALUE .)
+    BORDER          reduce using rule 13 (rule -> HEIGHT VALUE .)
+    FONT            reduce using rule 13 (rule -> HEIGHT VALUE .)
+    PADDING         reduce using rule 13 (rule -> HEIGHT VALUE .)
+    HEIGHT          reduce using rule 13 (rule -> HEIGHT VALUE .)
+    WIDTH           reduce using rule 13 (rule -> HEIGHT VALUE .)
+    BACKGROUND      reduce using rule 13 (rule -> HEIGHT VALUE .)
+    COLUMNS         reduce using rule 13 (rule -> HEIGHT VALUE .)
+
+
+state 107
+
+    (15) rule -> BACKGROUND VALUE .
+
+    BRACKET_FINISH  reduce using rule 15 (rule -> BACKGROUND VALUE .)
+    MARGIN          reduce using rule 15 (rule -> BACKGROUND VALUE .)
+    BORDER          reduce using rule 15 (rule -> BACKGROUND VALUE .)
+    FONT            reduce using rule 15 (rule -> BACKGROUND VALUE .)
+    PADDING         reduce using rule 15 (rule -> BACKGROUND VALUE .)
+    HEIGHT          reduce using rule 15 (rule -> BACKGROUND VALUE .)
+    WIDTH           reduce using rule 15 (rule -> BACKGROUND VALUE .)
+    BACKGROUND      reduce using rule 15 (rule -> BACKGROUND VALUE .)
+    COLUMNS         reduce using rule 15 (rule -> BACKGROUND VALUE .)
+
+
+state 108
+
+    (16) rule -> COLUMNS VALUE .
+
+    BRACKET_FINISH  reduce using rule 16 (rule -> COLUMNS VALUE .)
+    MARGIN          reduce using rule 16 (rule -> COLUMNS VALUE .)
+    BORDER          reduce using rule 16 (rule -> COLUMNS VALUE .)
+    FONT            reduce using rule 16 (rule -> COLUMNS VALUE .)
+    PADDING         reduce using rule 16 (rule -> COLUMNS VALUE .)
+    HEIGHT          reduce using rule 16 (rule -> COLUMNS VALUE .)
+    WIDTH           reduce using rule 16 (rule -> COLUMNS VALUE .)
+    BACKGROUND      reduce using rule 16 (rule -> COLUMNS VALUE .)
+    COLUMNS         reduce using rule 16 (rule -> COLUMNS VALUE .)
+
+
+state 109
+
+    (30) selector_attribute -> type CURLY_INITIAL attribute EQUAL_TEXT CURLY_FINISH .
+
+    BRACKET_INITIAL reduce using rule 30 (selector_attribute -> type CURLY_INITIAL attribute EQUAL_TEXT CURLY_FINISH .)
+    COMA            reduce using rule 30 (selector_attribute -> type CURLY_INITIAL attribute EQUAL_TEXT CURLY_FINISH .)
+
+
+state 110
+
+    (7) rule -> MARGIN directions VALUE .
+
+    BRACKET_FINISH  reduce using rule 7 (rule -> MARGIN directions VALUE .)
+    MARGIN          reduce using rule 7 (rule -> MARGIN directions VALUE .)
+    BORDER          reduce using rule 7 (rule -> MARGIN directions VALUE .)
+    FONT            reduce using rule 7 (rule -> MARGIN directions VALUE .)
+    PADDING         reduce using rule 7 (rule -> MARGIN directions VALUE .)
+    HEIGHT          reduce using rule 7 (rule -> MARGIN directions VALUE .)
+    WIDTH           reduce using rule 7 (rule -> MARGIN directions VALUE .)
+    BACKGROUND      reduce using rule 7 (rule -> MARGIN directions VALUE .)
+    COLUMNS         reduce using rule 7 (rule -> MARGIN directions VALUE .)
+
+
+state 111
+
+    (35) directions -> DASH TOP .
+
+    VALUE           reduce using rule 35 (directions -> DASH TOP .)
+
+
+state 112
+
+    (36) directions -> DASH BOTTOM .
+
+    VALUE           reduce using rule 36 (directions -> DASH BOTTOM .)
+
+
+state 113
+
+    (37) directions -> DASH LEFT .
+
+    VALUE           reduce using rule 37 (directions -> DASH LEFT .)
+
+
+state 114
+
+    (38) directions -> DASH RIGHT .
+
+    VALUE           reduce using rule 38 (directions -> DASH RIGHT .)
+
+
+state 115
+
+    (8) rule -> BORDER DASH COLOR . VALUE
+
+    VALUE           shift and go to state 120
+
+
+state 116
+
+    (9) rule -> BORDER DASH WIDTH . VALUE
+
+    VALUE           shift and go to state 121
+
+
+state 117
+
+    (10) rule -> FONT DASH SIZE . VALUE
+
+    VALUE           shift and go to state 122
+
+
+state 118
+
+    (11) rule -> FONT DASH COLOR . VALUE
+
+    VALUE           shift and go to state 123
+
+
+state 119
+
+    (12) rule -> PADDING directions VALUE .
+
+    BRACKET_FINISH  reduce using rule 12 (rule -> PADDING directions VALUE .)
+    MARGIN          reduce using rule 12 (rule -> PADDING directions VALUE .)
+    BORDER          reduce using rule 12 (rule -> PADDING directions VALUE .)
+    FONT            reduce using rule 12 (rule -> PADDING directions VALUE .)
+    PADDING         reduce using rule 12 (rule -> PADDING directions VALUE .)
+    HEIGHT          reduce using rule 12 (rule -> PADDING directions VALUE .)
+    WIDTH           reduce using rule 12 (rule -> PADDING directions VALUE .)
+    BACKGROUND      reduce using rule 12 (rule -> PADDING directions VALUE .)
+    COLUMNS         reduce using rule 12 (rule -> PADDING directions VALUE .)
+
+
+state 120
+
+    (8) rule -> BORDER DASH COLOR VALUE .
+
+    BRACKET_FINISH  reduce using rule 8 (rule -> BORDER DASH COLOR VALUE .)
+    MARGIN          reduce using rule 8 (rule -> BORDER DASH COLOR VALUE .)
+    BORDER          reduce using rule 8 (rule -> BORDER DASH COLOR VALUE .)
+    FONT            reduce using rule 8 (rule -> BORDER DASH COLOR VALUE .)
+    PADDING         reduce using rule 8 (rule -> BORDER DASH COLOR VALUE .)
+    HEIGHT          reduce using rule 8 (rule -> BORDER DASH COLOR VALUE .)
+    WIDTH           reduce using rule 8 (rule -> BORDER DASH COLOR VALUE .)
+    BACKGROUND      reduce using rule 8 (rule -> BORDER DASH COLOR VALUE .)
+    COLUMNS         reduce using rule 8 (rule -> BORDER DASH COLOR VALUE .)
+
+
+state 121
+
+    (9) rule -> BORDER DASH WIDTH VALUE .
+
+    BRACKET_FINISH  reduce using rule 9 (rule -> BORDER DASH WIDTH VALUE .)
+    MARGIN          reduce using rule 9 (rule -> BORDER DASH WIDTH VALUE .)
+    BORDER          reduce using rule 9 (rule -> BORDER DASH WIDTH VALUE .)
+    FONT            reduce using rule 9 (rule -> BORDER DASH WIDTH VALUE .)
+    PADDING         reduce using rule 9 (rule -> BORDER DASH WIDTH VALUE .)
+    HEIGHT          reduce using rule 9 (rule -> BORDER DASH WIDTH VALUE .)
+    WIDTH           reduce using rule 9 (rule -> BORDER DASH WIDTH VALUE .)
+    BACKGROUND      reduce using rule 9 (rule -> BORDER DASH WIDTH VALUE .)
+    COLUMNS         reduce using rule 9 (rule -> BORDER DASH WIDTH VALUE .)
+
+
+state 122
+
+    (10) rule -> FONT DASH SIZE VALUE .
+
+    BRACKET_FINISH  reduce using rule 10 (rule -> FONT DASH SIZE VALUE .)
+    MARGIN          reduce using rule 10 (rule -> FONT DASH SIZE VALUE .)
+    BORDER          reduce using rule 10 (rule -> FONT DASH SIZE VALUE .)
+    FONT            reduce using rule 10 (rule -> FONT DASH SIZE VALUE .)
+    PADDING         reduce using rule 10 (rule -> FONT DASH SIZE VALUE .)
+    HEIGHT          reduce using rule 10 (rule -> FONT DASH SIZE VALUE .)
+    WIDTH           reduce using rule 10 (rule -> FONT DASH SIZE VALUE .)
+    BACKGROUND      reduce using rule 10 (rule -> FONT DASH SIZE VALUE .)
+    COLUMNS         reduce using rule 10 (rule -> FONT DASH SIZE VALUE .)
+
+
+state 123
+
+    (11) rule -> FONT DASH COLOR VALUE .
+
+    BRACKET_FINISH  reduce using rule 11 (rule -> FONT DASH COLOR VALUE .)
+    MARGIN          reduce using rule 11 (rule -> FONT DASH COLOR VALUE .)
+    BORDER          reduce using rule 11 (rule -> FONT DASH COLOR VALUE .)
+    FONT            reduce using rule 11 (rule -> FONT DASH COLOR VALUE .)
+    PADDING         reduce using rule 11 (rule -> FONT DASH COLOR VALUE .)
+    HEIGHT          reduce using rule 11 (rule -> FONT DASH COLOR VALUE .)
+    WIDTH           reduce using rule 11 (rule -> FONT DASH COLOR VALUE .)
+    BACKGROUND      reduce using rule 11 (rule -> FONT DASH COLOR VALUE .)
+    COLUMNS         reduce using rule 11 (rule -> FONT DASH COLOR VALUE .)
+

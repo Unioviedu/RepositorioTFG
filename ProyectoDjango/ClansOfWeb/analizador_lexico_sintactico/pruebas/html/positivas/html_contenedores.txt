@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Titulo</title>
+</head>
+<body>
+	<header>
+		<nav>
+			
+		</nav>	
+	</header>
+
+	<section>
+		<aside>
+			<article> </article>
+		</aside>
+
+		<section>
+			<aside></aside>
+			<article></article>
+		</section>
+	</section>
+
+	<footer>
+		
+	</footer>
+</body>
+</html>

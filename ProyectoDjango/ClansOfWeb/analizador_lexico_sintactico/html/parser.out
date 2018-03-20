@@ -1,0 +1,3800 @@
+Created by PLY version 3.10 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> doc
+Rule 1     doc -> html_tag head body HTML_FINISH
+Rule 2     head -> head_tag head_elements HEAD_FINISH
+Rule 3     body -> body_tag elements BODY_FINISH
+Rule 4     section -> section_tag elements SECTION_FINISH
+Rule 5     aside -> aside_tag elements ASIDE_FINISH
+Rule 6     article -> article_tag elements ARTICLE_FINISH
+Rule 7     nav -> nav_tag elements NAV_FINISH
+Rule 8     ul -> ul_tag list_elements UL_FINISH
+Rule 9     ol -> ol_tag list_elements OL_FINISH
+Rule 10    footer -> footer_tag elements FOOTER_FINISH
+Rule 11    header -> header_tag elements HEADER_FINISH
+Rule 12    table -> table_tag table_elements TABLE_FINISH
+Rule 13    tr -> tr_tag table_elements_basic TR_FINISH
+Rule 14    title -> title_tag TEXT TITLE_FINISH
+Rule 15    link -> link_tag
+Rule 16    p -> p_tag TEXT P_FINISH
+Rule 17    h -> h_tag TEXT H_FINISH
+Rule 18    li -> li_tag TEXT LI_FINISH
+Rule 19    img -> img_tag
+Rule 20    a -> a_tag TEXT A_FINISH
+Rule 21    br -> br_tag
+Rule 22    th -> th_tag TEXT TH_FINISH
+Rule 23    td -> td_tag TEXT TD_FINISH
+Rule 24    caption -> caption_tag TEXT CAPTION_FINISH
+Rule 25    html_tag -> HTML attributes FINISH
+Rule 26    head_tag -> HEAD attributes FINISH
+Rule 27    body_tag -> BODY attributes FINISH
+Rule 28    section_tag -> SECTION attributes FINISH
+Rule 29    aside_tag -> ASIDE attributes FINISH
+Rule 30    article_tag -> ARTICLE attributes FINISH
+Rule 31    nav_tag -> NAV attributes FINISH
+Rule 32    ul_tag -> UL attributes FINISH
+Rule 33    ol_tag -> OL attributes FINISH
+Rule 34    footer_tag -> FOOTER attributes FINISH
+Rule 35    header_tag -> HEADER attributes FINISH
+Rule 36    table_tag -> TABLE attributes FINISH
+Rule 37    title_tag -> TITLE_INITIAL attributes FINISH
+Rule 38    link_tag -> LINK attributes FINISH
+Rule 39    p_tag -> P attributes FINISH
+Rule 40    h_tag -> H attributes FINISH
+Rule 41    li_tag -> LI attributes FINISH
+Rule 42    img_tag -> IMG attributes FINISH
+Rule 43    tr_tag -> TR attributes FINISH
+Rule 44    td_tag -> TD attributes FINISH
+Rule 45    th_tag -> TH attributes FINISH
+Rule 46    caption_tag -> CAPTION attributes FINISH
+Rule 47    a_tag -> A attributes FINISH
+Rule 48    br_tag -> BR
+Rule 49    elements -> empty
+Rule 50    elements -> elements element
+Rule 51    element -> section
+Rule 52    element -> aside
+Rule 53    element -> article
+Rule 54    element -> nav
+Rule 55    element -> ul
+Rule 56    element -> ol
+Rule 57    element -> footer
+Rule 58    element -> header
+Rule 59    element -> table
+Rule 60    element -> p
+Rule 61    element -> h
+Rule 62    element -> img
+Rule 63    element -> a
+Rule 64    element -> br
+Rule 65    list_elements -> empty
+Rule 66    list_elements -> list_elements list_element
+Rule 67    list_element -> li
+Rule 68    table_elements -> empty
+Rule 69    table_elements -> table_elements table_element
+Rule 70    table_element -> caption
+Rule 71    table_element -> tr
+Rule 72    table_elements_basic -> empty
+Rule 73    table_elements_basic -> table_elements_basic table_element_basic
+Rule 74    table_element_basic -> th
+Rule 75    table_element_basic -> td
+Rule 76    head_elements -> empty
+Rule 77    head_elements -> head_elements head_element
+Rule 78    head_element -> title
+Rule 79    head_element -> link
+Rule 80    attributes -> empty
+Rule 81    attributes -> attributes attribute
+Rule 82    attribute -> ID EQUAL VALUE
+Rule 83    attribute -> CLASS EQUAL VALUE
+Rule 84    attribute -> HREF EQUAL VALUE
+Rule 85    attribute -> SRC EQUAL VALUE
+Rule 86    attribute -> TITLE EQUAL VALUE
+Rule 87    attribute -> LANG EQUAL VALUE
+Rule 88    empty -> <empty>
+
+Terminals, with rules where they appear
+
+A                    : 47
+ARTICLE              : 30
+ARTICLE_FINISH       : 6
+ASIDE                : 29
+ASIDE_FINISH         : 5
+A_FINISH             : 20
+BODY                 : 27
+BODY_FINISH          : 3
+BR                   : 48
+CAPTION              : 46
+CAPTION_FINISH       : 24
+CLASS                : 83
+EQUAL                : 82 83 84 85 86 87
+FINISH               : 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+FOOTER               : 34
+FOOTER_FINISH        : 10
+H                    : 40
+HEAD                 : 26
+HEADER               : 35
+HEADER_FINISH        : 11
+HEAD_FINISH          : 2
+HREF                 : 84
+HTML                 : 25
+HTML_FINISH          : 1
+H_FINISH             : 17
+ID                   : 82
+IMG                  : 42
+LANG                 : 87
+LI                   : 41
+LINK                 : 38
+LI_FINISH            : 18
+NAV                  : 31
+NAV_FINISH           : 7
+OL                   : 33
+OL_FINISH            : 9
+P                    : 39
+P_FINISH             : 16
+SECTION              : 28
+SECTION_FINISH       : 4
+SRC                  : 85
+TABLE                : 36
+TABLE_FINISH         : 12
+TD                   : 44
+TD_FINISH            : 23
+TEXT                 : 14 16 17 18 20 22 23 24
+TH                   : 45
+TH_FINISH            : 22
+TITLE                : 86
+TITLE_FINISH         : 14
+TITLE_INITIAL        : 37
+TR                   : 43
+TR_FINISH            : 13
+UL                   : 32
+UL_FINISH            : 8
+VALUE                : 82 83 84 85 86 87
+error                : 
+
+Nonterminals, with rules where they appear
+
+a                    : 63
+a_tag                : 20
+article              : 53
+article_tag          : 6
+aside                : 52
+aside_tag            : 5
+attribute            : 81
+attributes           : 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 81
+body                 : 1
+body_tag             : 3
+br                   : 64
+br_tag               : 21
+caption              : 70
+caption_tag          : 24
+doc                  : 0
+element              : 50
+elements             : 3 4 5 6 7 10 11 50
+empty                : 49 65 68 72 76 80
+footer               : 57
+footer_tag           : 10
+h                    : 61
+h_tag                : 17
+head                 : 1
+head_element         : 77
+head_elements        : 2 77
+head_tag             : 2
+header               : 58
+header_tag           : 11
+html_tag             : 1
+img                  : 62
+img_tag              : 19
+li                   : 67
+li_tag               : 18
+link                 : 79
+link_tag             : 15
+list_element         : 66
+list_elements        : 8 9 66
+nav                  : 54
+nav_tag              : 7
+ol                   : 56
+ol_tag               : 9
+p                    : 60
+p_tag                : 16
+section              : 51
+section_tag          : 4
+table                : 59
+table_element        : 69
+table_element_basic  : 73
+table_elements       : 12 69
+table_elements_basic : 13 73
+table_tag            : 12
+td                   : 75
+td_tag               : 23
+th                   : 74
+th_tag               : 22
+title                : 78
+title_tag            : 14
+tr                   : 71
+tr_tag               : 13
+ul                   : 55
+ul_tag               : 8
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . doc
+    (1) doc -> . html_tag head body HTML_FINISH
+    (25) html_tag -> . HTML attributes FINISH
+
+    HTML            shift and go to state 3
+
+    doc                            shift and go to state 1
+    html_tag                       shift and go to state 2
+
+state 1
+
+    (0) S' -> doc .
+
+
+
+state 2
+
+    (1) doc -> html_tag . head body HTML_FINISH
+    (2) head -> . head_tag head_elements HEAD_FINISH
+    (26) head_tag -> . HEAD attributes FINISH
+
+    HEAD            shift and go to state 6
+
+    head                           shift and go to state 4
+    head_tag                       shift and go to state 5
+
+state 3
+
+    (25) html_tag -> HTML . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 7
+    empty                          shift and go to state 8
+
+state 4
+
+    (1) doc -> html_tag head . body HTML_FINISH
+    (3) body -> . body_tag elements BODY_FINISH
+    (27) body_tag -> . BODY attributes FINISH
+
+    BODY            shift and go to state 11
+
+    body                           shift and go to state 9
+    body_tag                       shift and go to state 10
+
+state 5
+
+    (2) head -> head_tag . head_elements HEAD_FINISH
+    (76) head_elements -> . empty
+    (77) head_elements -> . head_elements head_element
+    (88) empty -> .
+
+    HEAD_FINISH     reduce using rule 88 (empty -> .)
+    TITLE_INITIAL   reduce using rule 88 (empty -> .)
+    LINK            reduce using rule 88 (empty -> .)
+
+    head_elements                  shift and go to state 12
+    empty                          shift and go to state 13
+
+state 6
+
+    (26) head_tag -> HEAD . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 14
+    empty                          shift and go to state 8
+
+state 7
+
+    (25) html_tag -> HTML attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 15
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 8
+
+    (80) attributes -> empty .
+
+    FINISH          reduce using rule 80 (attributes -> empty .)
+    ID              reduce using rule 80 (attributes -> empty .)
+    CLASS           reduce using rule 80 (attributes -> empty .)
+    HREF            reduce using rule 80 (attributes -> empty .)
+    SRC             reduce using rule 80 (attributes -> empty .)
+    TITLE           reduce using rule 80 (attributes -> empty .)
+    LANG            reduce using rule 80 (attributes -> empty .)
+
+
+state 9
+
+    (1) doc -> html_tag head body . HTML_FINISH
+
+    HTML_FINISH     shift and go to state 23
+
+
+state 10
+
+    (3) body -> body_tag . elements BODY_FINISH
+    (49) elements -> . empty
+    (50) elements -> . elements element
+    (88) empty -> .
+
+    BODY_FINISH     reduce using rule 88 (empty -> .)
+    SECTION         reduce using rule 88 (empty -> .)
+    ASIDE           reduce using rule 88 (empty -> .)
+    ARTICLE         reduce using rule 88 (empty -> .)
+    NAV             reduce using rule 88 (empty -> .)
+    UL              reduce using rule 88 (empty -> .)
+    OL              reduce using rule 88 (empty -> .)
+    FOOTER          reduce using rule 88 (empty -> .)
+    HEADER          reduce using rule 88 (empty -> .)
+    TABLE           reduce using rule 88 (empty -> .)
+    P               reduce using rule 88 (empty -> .)
+    H               reduce using rule 88 (empty -> .)
+    IMG             reduce using rule 88 (empty -> .)
+    A               reduce using rule 88 (empty -> .)
+    BR              reduce using rule 88 (empty -> .)
+
+    elements                       shift and go to state 24
+    empty                          shift and go to state 25
+
+state 11
+
+    (27) body_tag -> BODY . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 26
+    empty                          shift and go to state 8
+
+state 12
+
+    (2) head -> head_tag head_elements . HEAD_FINISH
+    (77) head_elements -> head_elements . head_element
+    (78) head_element -> . title
+    (79) head_element -> . link
+    (14) title -> . title_tag TEXT TITLE_FINISH
+    (15) link -> . link_tag
+    (37) title_tag -> . TITLE_INITIAL attributes FINISH
+    (38) link_tag -> . LINK attributes FINISH
+
+    HEAD_FINISH     shift and go to state 27
+    TITLE_INITIAL   shift and go to state 33
+    LINK            shift and go to state 34
+
+    head_element                   shift and go to state 28
+    title                          shift and go to state 29
+    link                           shift and go to state 30
+    title_tag                      shift and go to state 31
+    link_tag                       shift and go to state 32
+
+state 13
+
+    (76) head_elements -> empty .
+
+    HEAD_FINISH     reduce using rule 76 (head_elements -> empty .)
+    TITLE_INITIAL   reduce using rule 76 (head_elements -> empty .)
+    LINK            reduce using rule 76 (head_elements -> empty .)
+
+
+state 14
+
+    (26) head_tag -> HEAD attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 35
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 15
+
+    (25) html_tag -> HTML attributes FINISH .
+
+    HEAD            reduce using rule 25 (html_tag -> HTML attributes FINISH .)
+
+
+state 16
+
+    (81) attributes -> attributes attribute .
+
+    FINISH          reduce using rule 81 (attributes -> attributes attribute .)
+    ID              reduce using rule 81 (attributes -> attributes attribute .)
+    CLASS           reduce using rule 81 (attributes -> attributes attribute .)
+    HREF            reduce using rule 81 (attributes -> attributes attribute .)
+    SRC             reduce using rule 81 (attributes -> attributes attribute .)
+    TITLE           reduce using rule 81 (attributes -> attributes attribute .)
+    LANG            reduce using rule 81 (attributes -> attributes attribute .)
+
+
+state 17
+
+    (82) attribute -> ID . EQUAL VALUE
+
+    EQUAL           shift and go to state 36
+
+
+state 18
+
+    (83) attribute -> CLASS . EQUAL VALUE
+
+    EQUAL           shift and go to state 37
+
+
+state 19
+
+    (84) attribute -> HREF . EQUAL VALUE
+
+    EQUAL           shift and go to state 38
+
+
+state 20
+
+    (85) attribute -> SRC . EQUAL VALUE
+
+    EQUAL           shift and go to state 39
+
+
+state 21
+
+    (86) attribute -> TITLE . EQUAL VALUE
+
+    EQUAL           shift and go to state 40
+
+
+state 22
+
+    (87) attribute -> LANG . EQUAL VALUE
+
+    EQUAL           shift and go to state 41
+
+
+state 23
+
+    (1) doc -> html_tag head body HTML_FINISH .
+
+    $end            reduce using rule 1 (doc -> html_tag head body HTML_FINISH .)
+
+
+state 24
+
+    (3) body -> body_tag elements . BODY_FINISH
+    (50) elements -> elements . element
+    (51) element -> . section
+    (52) element -> . aside
+    (53) element -> . article
+    (54) element -> . nav
+    (55) element -> . ul
+    (56) element -> . ol
+    (57) element -> . footer
+    (58) element -> . header
+    (59) element -> . table
+    (60) element -> . p
+    (61) element -> . h
+    (62) element -> . img
+    (63) element -> . a
+    (64) element -> . br
+    (4) section -> . section_tag elements SECTION_FINISH
+    (5) aside -> . aside_tag elements ASIDE_FINISH
+    (6) article -> . article_tag elements ARTICLE_FINISH
+    (7) nav -> . nav_tag elements NAV_FINISH
+    (8) ul -> . ul_tag list_elements UL_FINISH
+    (9) ol -> . ol_tag list_elements OL_FINISH
+    (10) footer -> . footer_tag elements FOOTER_FINISH
+    (11) header -> . header_tag elements HEADER_FINISH
+    (12) table -> . table_tag table_elements TABLE_FINISH
+    (16) p -> . p_tag TEXT P_FINISH
+    (17) h -> . h_tag TEXT H_FINISH
+    (19) img -> . img_tag
+    (20) a -> . a_tag TEXT A_FINISH
+    (21) br -> . br_tag
+    (28) section_tag -> . SECTION attributes FINISH
+    (29) aside_tag -> . ASIDE attributes FINISH
+    (30) article_tag -> . ARTICLE attributes FINISH
+    (31) nav_tag -> . NAV attributes FINISH
+    (32) ul_tag -> . UL attributes FINISH
+    (33) ol_tag -> . OL attributes FINISH
+    (34) footer_tag -> . FOOTER attributes FINISH
+    (35) header_tag -> . HEADER attributes FINISH
+    (36) table_tag -> . TABLE attributes FINISH
+    (39) p_tag -> . P attributes FINISH
+    (40) h_tag -> . H attributes FINISH
+    (42) img_tag -> . IMG attributes FINISH
+    (47) a_tag -> . A attributes FINISH
+    (48) br_tag -> . BR
+
+    BODY_FINISH     shift and go to state 42
+    SECTION         shift and go to state 72
+    ASIDE           shift and go to state 73
+    ARTICLE         shift and go to state 74
+    NAV             shift and go to state 75
+    UL              shift and go to state 76
+    OL              shift and go to state 77
+    FOOTER          shift and go to state 78
+    HEADER          shift and go to state 79
+    TABLE           shift and go to state 80
+    P               shift and go to state 81
+    H               shift and go to state 82
+    IMG             shift and go to state 83
+    A               shift and go to state 84
+    BR              shift and go to state 85
+
+    element                        shift and go to state 43
+    section                        shift and go to state 44
+    aside                          shift and go to state 45
+    article                        shift and go to state 46
+    nav                            shift and go to state 47
+    ul                             shift and go to state 48
+    ol                             shift and go to state 49
+    footer                         shift and go to state 50
+    header                         shift and go to state 51
+    table                          shift and go to state 52
+    p                              shift and go to state 53
+    h                              shift and go to state 54
+    img                            shift and go to state 55
+    a                              shift and go to state 56
+    br                             shift and go to state 57
+    section_tag                    shift and go to state 58
+    aside_tag                      shift and go to state 59
+    article_tag                    shift and go to state 60
+    nav_tag                        shift and go to state 61
+    ul_tag                         shift and go to state 62
+    ol_tag                         shift and go to state 63
+    footer_tag                     shift and go to state 64
+    header_tag                     shift and go to state 65
+    table_tag                      shift and go to state 66
+    p_tag                          shift and go to state 67
+    h_tag                          shift and go to state 68
+    img_tag                        shift and go to state 69
+    a_tag                          shift and go to state 70
+    br_tag                         shift and go to state 71
+
+state 25
+
+    (49) elements -> empty .
+
+    BODY_FINISH     reduce using rule 49 (elements -> empty .)
+    SECTION         reduce using rule 49 (elements -> empty .)
+    ASIDE           reduce using rule 49 (elements -> empty .)
+    ARTICLE         reduce using rule 49 (elements -> empty .)
+    NAV             reduce using rule 49 (elements -> empty .)
+    UL              reduce using rule 49 (elements -> empty .)
+    OL              reduce using rule 49 (elements -> empty .)
+    FOOTER          reduce using rule 49 (elements -> empty .)
+    HEADER          reduce using rule 49 (elements -> empty .)
+    TABLE           reduce using rule 49 (elements -> empty .)
+    P               reduce using rule 49 (elements -> empty .)
+    H               reduce using rule 49 (elements -> empty .)
+    IMG             reduce using rule 49 (elements -> empty .)
+    A               reduce using rule 49 (elements -> empty .)
+    BR              reduce using rule 49 (elements -> empty .)
+    SECTION_FINISH  reduce using rule 49 (elements -> empty .)
+    ASIDE_FINISH    reduce using rule 49 (elements -> empty .)
+    ARTICLE_FINISH  reduce using rule 49 (elements -> empty .)
+    NAV_FINISH      reduce using rule 49 (elements -> empty .)
+    FOOTER_FINISH   reduce using rule 49 (elements -> empty .)
+    HEADER_FINISH   reduce using rule 49 (elements -> empty .)
+
+
+state 26
+
+    (27) body_tag -> BODY attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 86
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 27
+
+    (2) head -> head_tag head_elements HEAD_FINISH .
+
+    BODY            reduce using rule 2 (head -> head_tag head_elements HEAD_FINISH .)
+
+
+state 28
+
+    (77) head_elements -> head_elements head_element .
+
+    HEAD_FINISH     reduce using rule 77 (head_elements -> head_elements head_element .)
+    TITLE_INITIAL   reduce using rule 77 (head_elements -> head_elements head_element .)
+    LINK            reduce using rule 77 (head_elements -> head_elements head_element .)
+
+
+state 29
+
+    (78) head_element -> title .
+
+    HEAD_FINISH     reduce using rule 78 (head_element -> title .)
+    TITLE_INITIAL   reduce using rule 78 (head_element -> title .)
+    LINK            reduce using rule 78 (head_element -> title .)
+
+
+state 30
+
+    (79) head_element -> link .
+
+    HEAD_FINISH     reduce using rule 79 (head_element -> link .)
+    TITLE_INITIAL   reduce using rule 79 (head_element -> link .)
+    LINK            reduce using rule 79 (head_element -> link .)
+
+
+state 31
+
+    (14) title -> title_tag . TEXT TITLE_FINISH
+
+    TEXT            shift and go to state 87
+
+
+state 32
+
+    (15) link -> link_tag .
+
+    HEAD_FINISH     reduce using rule 15 (link -> link_tag .)
+    TITLE_INITIAL   reduce using rule 15 (link -> link_tag .)
+    LINK            reduce using rule 15 (link -> link_tag .)
+
+
+state 33
+
+    (37) title_tag -> TITLE_INITIAL . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 88
+    empty                          shift and go to state 8
+
+state 34
+
+    (38) link_tag -> LINK . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 89
+    empty                          shift and go to state 8
+
+state 35
+
+    (26) head_tag -> HEAD attributes FINISH .
+
+    HEAD_FINISH     reduce using rule 26 (head_tag -> HEAD attributes FINISH .)
+    TITLE_INITIAL   reduce using rule 26 (head_tag -> HEAD attributes FINISH .)
+    LINK            reduce using rule 26 (head_tag -> HEAD attributes FINISH .)
+
+
+state 36
+
+    (82) attribute -> ID EQUAL . VALUE
+
+    VALUE           shift and go to state 90
+
+
+state 37
+
+    (83) attribute -> CLASS EQUAL . VALUE
+
+    VALUE           shift and go to state 91
+
+
+state 38
+
+    (84) attribute -> HREF EQUAL . VALUE
+
+    VALUE           shift and go to state 92
+
+
+state 39
+
+    (85) attribute -> SRC EQUAL . VALUE
+
+    VALUE           shift and go to state 93
+
+
+state 40
+
+    (86) attribute -> TITLE EQUAL . VALUE
+
+    VALUE           shift and go to state 94
+
+
+state 41
+
+    (87) attribute -> LANG EQUAL . VALUE
+
+    VALUE           shift and go to state 95
+
+
+state 42
+
+    (3) body -> body_tag elements BODY_FINISH .
+
+    HTML_FINISH     reduce using rule 3 (body -> body_tag elements BODY_FINISH .)
+
+
+state 43
+
+    (50) elements -> elements element .
+
+    BODY_FINISH     reduce using rule 50 (elements -> elements element .)
+    SECTION         reduce using rule 50 (elements -> elements element .)
+    ASIDE           reduce using rule 50 (elements -> elements element .)
+    ARTICLE         reduce using rule 50 (elements -> elements element .)
+    NAV             reduce using rule 50 (elements -> elements element .)
+    UL              reduce using rule 50 (elements -> elements element .)
+    OL              reduce using rule 50 (elements -> elements element .)
+    FOOTER          reduce using rule 50 (elements -> elements element .)
+    HEADER          reduce using rule 50 (elements -> elements element .)
+    TABLE           reduce using rule 50 (elements -> elements element .)
+    P               reduce using rule 50 (elements -> elements element .)
+    H               reduce using rule 50 (elements -> elements element .)
+    IMG             reduce using rule 50 (elements -> elements element .)
+    A               reduce using rule 50 (elements -> elements element .)
+    BR              reduce using rule 50 (elements -> elements element .)
+    SECTION_FINISH  reduce using rule 50 (elements -> elements element .)
+    ASIDE_FINISH    reduce using rule 50 (elements -> elements element .)
+    ARTICLE_FINISH  reduce using rule 50 (elements -> elements element .)
+    NAV_FINISH      reduce using rule 50 (elements -> elements element .)
+    FOOTER_FINISH   reduce using rule 50 (elements -> elements element .)
+    HEADER_FINISH   reduce using rule 50 (elements -> elements element .)
+
+
+state 44
+
+    (51) element -> section .
+
+    BODY_FINISH     reduce using rule 51 (element -> section .)
+    SECTION         reduce using rule 51 (element -> section .)
+    ASIDE           reduce using rule 51 (element -> section .)
+    ARTICLE         reduce using rule 51 (element -> section .)
+    NAV             reduce using rule 51 (element -> section .)
+    UL              reduce using rule 51 (element -> section .)
+    OL              reduce using rule 51 (element -> section .)
+    FOOTER          reduce using rule 51 (element -> section .)
+    HEADER          reduce using rule 51 (element -> section .)
+    TABLE           reduce using rule 51 (element -> section .)
+    P               reduce using rule 51 (element -> section .)
+    H               reduce using rule 51 (element -> section .)
+    IMG             reduce using rule 51 (element -> section .)
+    A               reduce using rule 51 (element -> section .)
+    BR              reduce using rule 51 (element -> section .)
+    SECTION_FINISH  reduce using rule 51 (element -> section .)
+    ASIDE_FINISH    reduce using rule 51 (element -> section .)
+    ARTICLE_FINISH  reduce using rule 51 (element -> section .)
+    NAV_FINISH      reduce using rule 51 (element -> section .)
+    FOOTER_FINISH   reduce using rule 51 (element -> section .)
+    HEADER_FINISH   reduce using rule 51 (element -> section .)
+
+
+state 45
+
+    (52) element -> aside .
+
+    BODY_FINISH     reduce using rule 52 (element -> aside .)
+    SECTION         reduce using rule 52 (element -> aside .)
+    ASIDE           reduce using rule 52 (element -> aside .)
+    ARTICLE         reduce using rule 52 (element -> aside .)
+    NAV             reduce using rule 52 (element -> aside .)
+    UL              reduce using rule 52 (element -> aside .)
+    OL              reduce using rule 52 (element -> aside .)
+    FOOTER          reduce using rule 52 (element -> aside .)
+    HEADER          reduce using rule 52 (element -> aside .)
+    TABLE           reduce using rule 52 (element -> aside .)
+    P               reduce using rule 52 (element -> aside .)
+    H               reduce using rule 52 (element -> aside .)
+    IMG             reduce using rule 52 (element -> aside .)
+    A               reduce using rule 52 (element -> aside .)
+    BR              reduce using rule 52 (element -> aside .)
+    SECTION_FINISH  reduce using rule 52 (element -> aside .)
+    ASIDE_FINISH    reduce using rule 52 (element -> aside .)
+    ARTICLE_FINISH  reduce using rule 52 (element -> aside .)
+    NAV_FINISH      reduce using rule 52 (element -> aside .)
+    FOOTER_FINISH   reduce using rule 52 (element -> aside .)
+    HEADER_FINISH   reduce using rule 52 (element -> aside .)
+
+
+state 46
+
+    (53) element -> article .
+
+    BODY_FINISH     reduce using rule 53 (element -> article .)
+    SECTION         reduce using rule 53 (element -> article .)
+    ASIDE           reduce using rule 53 (element -> article .)
+    ARTICLE         reduce using rule 53 (element -> article .)
+    NAV             reduce using rule 53 (element -> article .)
+    UL              reduce using rule 53 (element -> article .)
+    OL              reduce using rule 53 (element -> article .)
+    FOOTER          reduce using rule 53 (element -> article .)
+    HEADER          reduce using rule 53 (element -> article .)
+    TABLE           reduce using rule 53 (element -> article .)
+    P               reduce using rule 53 (element -> article .)
+    H               reduce using rule 53 (element -> article .)
+    IMG             reduce using rule 53 (element -> article .)
+    A               reduce using rule 53 (element -> article .)
+    BR              reduce using rule 53 (element -> article .)
+    SECTION_FINISH  reduce using rule 53 (element -> article .)
+    ASIDE_FINISH    reduce using rule 53 (element -> article .)
+    ARTICLE_FINISH  reduce using rule 53 (element -> article .)
+    NAV_FINISH      reduce using rule 53 (element -> article .)
+    FOOTER_FINISH   reduce using rule 53 (element -> article .)
+    HEADER_FINISH   reduce using rule 53 (element -> article .)
+
+
+state 47
+
+    (54) element -> nav .
+
+    BODY_FINISH     reduce using rule 54 (element -> nav .)
+    SECTION         reduce using rule 54 (element -> nav .)
+    ASIDE           reduce using rule 54 (element -> nav .)
+    ARTICLE         reduce using rule 54 (element -> nav .)
+    NAV             reduce using rule 54 (element -> nav .)
+    UL              reduce using rule 54 (element -> nav .)
+    OL              reduce using rule 54 (element -> nav .)
+    FOOTER          reduce using rule 54 (element -> nav .)
+    HEADER          reduce using rule 54 (element -> nav .)
+    TABLE           reduce using rule 54 (element -> nav .)
+    P               reduce using rule 54 (element -> nav .)
+    H               reduce using rule 54 (element -> nav .)
+    IMG             reduce using rule 54 (element -> nav .)
+    A               reduce using rule 54 (element -> nav .)
+    BR              reduce using rule 54 (element -> nav .)
+    SECTION_FINISH  reduce using rule 54 (element -> nav .)
+    ASIDE_FINISH    reduce using rule 54 (element -> nav .)
+    ARTICLE_FINISH  reduce using rule 54 (element -> nav .)
+    NAV_FINISH      reduce using rule 54 (element -> nav .)
+    FOOTER_FINISH   reduce using rule 54 (element -> nav .)
+    HEADER_FINISH   reduce using rule 54 (element -> nav .)
+
+
+state 48
+
+    (55) element -> ul .
+
+    BODY_FINISH     reduce using rule 55 (element -> ul .)
+    SECTION         reduce using rule 55 (element -> ul .)
+    ASIDE           reduce using rule 55 (element -> ul .)
+    ARTICLE         reduce using rule 55 (element -> ul .)
+    NAV             reduce using rule 55 (element -> ul .)
+    UL              reduce using rule 55 (element -> ul .)
+    OL              reduce using rule 55 (element -> ul .)
+    FOOTER          reduce using rule 55 (element -> ul .)
+    HEADER          reduce using rule 55 (element -> ul .)
+    TABLE           reduce using rule 55 (element -> ul .)
+    P               reduce using rule 55 (element -> ul .)
+    H               reduce using rule 55 (element -> ul .)
+    IMG             reduce using rule 55 (element -> ul .)
+    A               reduce using rule 55 (element -> ul .)
+    BR              reduce using rule 55 (element -> ul .)
+    SECTION_FINISH  reduce using rule 55 (element -> ul .)
+    ASIDE_FINISH    reduce using rule 55 (element -> ul .)
+    ARTICLE_FINISH  reduce using rule 55 (element -> ul .)
+    NAV_FINISH      reduce using rule 55 (element -> ul .)
+    FOOTER_FINISH   reduce using rule 55 (element -> ul .)
+    HEADER_FINISH   reduce using rule 55 (element -> ul .)
+
+
+state 49
+
+    (56) element -> ol .
+
+    BODY_FINISH     reduce using rule 56 (element -> ol .)
+    SECTION         reduce using rule 56 (element -> ol .)
+    ASIDE           reduce using rule 56 (element -> ol .)
+    ARTICLE         reduce using rule 56 (element -> ol .)
+    NAV             reduce using rule 56 (element -> ol .)
+    UL              reduce using rule 56 (element -> ol .)
+    OL              reduce using rule 56 (element -> ol .)
+    FOOTER          reduce using rule 56 (element -> ol .)
+    HEADER          reduce using rule 56 (element -> ol .)
+    TABLE           reduce using rule 56 (element -> ol .)
+    P               reduce using rule 56 (element -> ol .)
+    H               reduce using rule 56 (element -> ol .)
+    IMG             reduce using rule 56 (element -> ol .)
+    A               reduce using rule 56 (element -> ol .)
+    BR              reduce using rule 56 (element -> ol .)
+    SECTION_FINISH  reduce using rule 56 (element -> ol .)
+    ASIDE_FINISH    reduce using rule 56 (element -> ol .)
+    ARTICLE_FINISH  reduce using rule 56 (element -> ol .)
+    NAV_FINISH      reduce using rule 56 (element -> ol .)
+    FOOTER_FINISH   reduce using rule 56 (element -> ol .)
+    HEADER_FINISH   reduce using rule 56 (element -> ol .)
+
+
+state 50
+
+    (57) element -> footer .
+
+    BODY_FINISH     reduce using rule 57 (element -> footer .)
+    SECTION         reduce using rule 57 (element -> footer .)
+    ASIDE           reduce using rule 57 (element -> footer .)
+    ARTICLE         reduce using rule 57 (element -> footer .)
+    NAV             reduce using rule 57 (element -> footer .)
+    UL              reduce using rule 57 (element -> footer .)
+    OL              reduce using rule 57 (element -> footer .)
+    FOOTER          reduce using rule 57 (element -> footer .)
+    HEADER          reduce using rule 57 (element -> footer .)
+    TABLE           reduce using rule 57 (element -> footer .)
+    P               reduce using rule 57 (element -> footer .)
+    H               reduce using rule 57 (element -> footer .)
+    IMG             reduce using rule 57 (element -> footer .)
+    A               reduce using rule 57 (element -> footer .)
+    BR              reduce using rule 57 (element -> footer .)
+    SECTION_FINISH  reduce using rule 57 (element -> footer .)
+    ASIDE_FINISH    reduce using rule 57 (element -> footer .)
+    ARTICLE_FINISH  reduce using rule 57 (element -> footer .)
+    NAV_FINISH      reduce using rule 57 (element -> footer .)
+    FOOTER_FINISH   reduce using rule 57 (element -> footer .)
+    HEADER_FINISH   reduce using rule 57 (element -> footer .)
+
+
+state 51
+
+    (58) element -> header .
+
+    BODY_FINISH     reduce using rule 58 (element -> header .)
+    SECTION         reduce using rule 58 (element -> header .)
+    ASIDE           reduce using rule 58 (element -> header .)
+    ARTICLE         reduce using rule 58 (element -> header .)
+    NAV             reduce using rule 58 (element -> header .)
+    UL              reduce using rule 58 (element -> header .)
+    OL              reduce using rule 58 (element -> header .)
+    FOOTER          reduce using rule 58 (element -> header .)
+    HEADER          reduce using rule 58 (element -> header .)
+    TABLE           reduce using rule 58 (element -> header .)
+    P               reduce using rule 58 (element -> header .)
+    H               reduce using rule 58 (element -> header .)
+    IMG             reduce using rule 58 (element -> header .)
+    A               reduce using rule 58 (element -> header .)
+    BR              reduce using rule 58 (element -> header .)
+    SECTION_FINISH  reduce using rule 58 (element -> header .)
+    ASIDE_FINISH    reduce using rule 58 (element -> header .)
+    ARTICLE_FINISH  reduce using rule 58 (element -> header .)
+    NAV_FINISH      reduce using rule 58 (element -> header .)
+    FOOTER_FINISH   reduce using rule 58 (element -> header .)
+    HEADER_FINISH   reduce using rule 58 (element -> header .)
+
+
+state 52
+
+    (59) element -> table .
+
+    BODY_FINISH     reduce using rule 59 (element -> table .)
+    SECTION         reduce using rule 59 (element -> table .)
+    ASIDE           reduce using rule 59 (element -> table .)
+    ARTICLE         reduce using rule 59 (element -> table .)
+    NAV             reduce using rule 59 (element -> table .)
+    UL              reduce using rule 59 (element -> table .)
+    OL              reduce using rule 59 (element -> table .)
+    FOOTER          reduce using rule 59 (element -> table .)
+    HEADER          reduce using rule 59 (element -> table .)
+    TABLE           reduce using rule 59 (element -> table .)
+    P               reduce using rule 59 (element -> table .)
+    H               reduce using rule 59 (element -> table .)
+    IMG             reduce using rule 59 (element -> table .)
+    A               reduce using rule 59 (element -> table .)
+    BR              reduce using rule 59 (element -> table .)
+    SECTION_FINISH  reduce using rule 59 (element -> table .)
+    ASIDE_FINISH    reduce using rule 59 (element -> table .)
+    ARTICLE_FINISH  reduce using rule 59 (element -> table .)
+    NAV_FINISH      reduce using rule 59 (element -> table .)
+    FOOTER_FINISH   reduce using rule 59 (element -> table .)
+    HEADER_FINISH   reduce using rule 59 (element -> table .)
+
+
+state 53
+
+    (60) element -> p .
+
+    BODY_FINISH     reduce using rule 60 (element -> p .)
+    SECTION         reduce using rule 60 (element -> p .)
+    ASIDE           reduce using rule 60 (element -> p .)
+    ARTICLE         reduce using rule 60 (element -> p .)
+    NAV             reduce using rule 60 (element -> p .)
+    UL              reduce using rule 60 (element -> p .)
+    OL              reduce using rule 60 (element -> p .)
+    FOOTER          reduce using rule 60 (element -> p .)
+    HEADER          reduce using rule 60 (element -> p .)
+    TABLE           reduce using rule 60 (element -> p .)
+    P               reduce using rule 60 (element -> p .)
+    H               reduce using rule 60 (element -> p .)
+    IMG             reduce using rule 60 (element -> p .)
+    A               reduce using rule 60 (element -> p .)
+    BR              reduce using rule 60 (element -> p .)
+    SECTION_FINISH  reduce using rule 60 (element -> p .)
+    ASIDE_FINISH    reduce using rule 60 (element -> p .)
+    ARTICLE_FINISH  reduce using rule 60 (element -> p .)
+    NAV_FINISH      reduce using rule 60 (element -> p .)
+    FOOTER_FINISH   reduce using rule 60 (element -> p .)
+    HEADER_FINISH   reduce using rule 60 (element -> p .)
+
+
+state 54
+
+    (61) element -> h .
+
+    BODY_FINISH     reduce using rule 61 (element -> h .)
+    SECTION         reduce using rule 61 (element -> h .)
+    ASIDE           reduce using rule 61 (element -> h .)
+    ARTICLE         reduce using rule 61 (element -> h .)
+    NAV             reduce using rule 61 (element -> h .)
+    UL              reduce using rule 61 (element -> h .)
+    OL              reduce using rule 61 (element -> h .)
+    FOOTER          reduce using rule 61 (element -> h .)
+    HEADER          reduce using rule 61 (element -> h .)
+    TABLE           reduce using rule 61 (element -> h .)
+    P               reduce using rule 61 (element -> h .)
+    H               reduce using rule 61 (element -> h .)
+    IMG             reduce using rule 61 (element -> h .)
+    A               reduce using rule 61 (element -> h .)
+    BR              reduce using rule 61 (element -> h .)
+    SECTION_FINISH  reduce using rule 61 (element -> h .)
+    ASIDE_FINISH    reduce using rule 61 (element -> h .)
+    ARTICLE_FINISH  reduce using rule 61 (element -> h .)
+    NAV_FINISH      reduce using rule 61 (element -> h .)
+    FOOTER_FINISH   reduce using rule 61 (element -> h .)
+    HEADER_FINISH   reduce using rule 61 (element -> h .)
+
+
+state 55
+
+    (62) element -> img .
+
+    BODY_FINISH     reduce using rule 62 (element -> img .)
+    SECTION         reduce using rule 62 (element -> img .)
+    ASIDE           reduce using rule 62 (element -> img .)
+    ARTICLE         reduce using rule 62 (element -> img .)
+    NAV             reduce using rule 62 (element -> img .)
+    UL              reduce using rule 62 (element -> img .)
+    OL              reduce using rule 62 (element -> img .)
+    FOOTER          reduce using rule 62 (element -> img .)
+    HEADER          reduce using rule 62 (element -> img .)
+    TABLE           reduce using rule 62 (element -> img .)
+    P               reduce using rule 62 (element -> img .)
+    H               reduce using rule 62 (element -> img .)
+    IMG             reduce using rule 62 (element -> img .)
+    A               reduce using rule 62 (element -> img .)
+    BR              reduce using rule 62 (element -> img .)
+    SECTION_FINISH  reduce using rule 62 (element -> img .)
+    ASIDE_FINISH    reduce using rule 62 (element -> img .)
+    ARTICLE_FINISH  reduce using rule 62 (element -> img .)
+    NAV_FINISH      reduce using rule 62 (element -> img .)
+    FOOTER_FINISH   reduce using rule 62 (element -> img .)
+    HEADER_FINISH   reduce using rule 62 (element -> img .)
+
+
+state 56
+
+    (63) element -> a .
+
+    BODY_FINISH     reduce using rule 63 (element -> a .)
+    SECTION         reduce using rule 63 (element -> a .)
+    ASIDE           reduce using rule 63 (element -> a .)
+    ARTICLE         reduce using rule 63 (element -> a .)
+    NAV             reduce using rule 63 (element -> a .)
+    UL              reduce using rule 63 (element -> a .)
+    OL              reduce using rule 63 (element -> a .)
+    FOOTER          reduce using rule 63 (element -> a .)
+    HEADER          reduce using rule 63 (element -> a .)
+    TABLE           reduce using rule 63 (element -> a .)
+    P               reduce using rule 63 (element -> a .)
+    H               reduce using rule 63 (element -> a .)
+    IMG             reduce using rule 63 (element -> a .)
+    A               reduce using rule 63 (element -> a .)
+    BR              reduce using rule 63 (element -> a .)
+    SECTION_FINISH  reduce using rule 63 (element -> a .)
+    ASIDE_FINISH    reduce using rule 63 (element -> a .)
+    ARTICLE_FINISH  reduce using rule 63 (element -> a .)
+    NAV_FINISH      reduce using rule 63 (element -> a .)
+    FOOTER_FINISH   reduce using rule 63 (element -> a .)
+    HEADER_FINISH   reduce using rule 63 (element -> a .)
+
+
+state 57
+
+    (64) element -> br .
+
+    BODY_FINISH     reduce using rule 64 (element -> br .)
+    SECTION         reduce using rule 64 (element -> br .)
+    ASIDE           reduce using rule 64 (element -> br .)
+    ARTICLE         reduce using rule 64 (element -> br .)
+    NAV             reduce using rule 64 (element -> br .)
+    UL              reduce using rule 64 (element -> br .)
+    OL              reduce using rule 64 (element -> br .)
+    FOOTER          reduce using rule 64 (element -> br .)
+    HEADER          reduce using rule 64 (element -> br .)
+    TABLE           reduce using rule 64 (element -> br .)
+    P               reduce using rule 64 (element -> br .)
+    H               reduce using rule 64 (element -> br .)
+    IMG             reduce using rule 64 (element -> br .)
+    A               reduce using rule 64 (element -> br .)
+    BR              reduce using rule 64 (element -> br .)
+    SECTION_FINISH  reduce using rule 64 (element -> br .)
+    ASIDE_FINISH    reduce using rule 64 (element -> br .)
+    ARTICLE_FINISH  reduce using rule 64 (element -> br .)
+    NAV_FINISH      reduce using rule 64 (element -> br .)
+    FOOTER_FINISH   reduce using rule 64 (element -> br .)
+    HEADER_FINISH   reduce using rule 64 (element -> br .)
+
+
+state 58
+
+    (4) section -> section_tag . elements SECTION_FINISH
+    (49) elements -> . empty
+    (50) elements -> . elements element
+    (88) empty -> .
+
+    SECTION_FINISH  reduce using rule 88 (empty -> .)
+    SECTION         reduce using rule 88 (empty -> .)
+    ASIDE           reduce using rule 88 (empty -> .)
+    ARTICLE         reduce using rule 88 (empty -> .)
+    NAV             reduce using rule 88 (empty -> .)
+    UL              reduce using rule 88 (empty -> .)
+    OL              reduce using rule 88 (empty -> .)
+    FOOTER          reduce using rule 88 (empty -> .)
+    HEADER          reduce using rule 88 (empty -> .)
+    TABLE           reduce using rule 88 (empty -> .)
+    P               reduce using rule 88 (empty -> .)
+    H               reduce using rule 88 (empty -> .)
+    IMG             reduce using rule 88 (empty -> .)
+    A               reduce using rule 88 (empty -> .)
+    BR              reduce using rule 88 (empty -> .)
+
+    elements                       shift and go to state 96
+    empty                          shift and go to state 25
+
+state 59
+
+    (5) aside -> aside_tag . elements ASIDE_FINISH
+    (49) elements -> . empty
+    (50) elements -> . elements element
+    (88) empty -> .
+
+    ASIDE_FINISH    reduce using rule 88 (empty -> .)
+    SECTION         reduce using rule 88 (empty -> .)
+    ASIDE           reduce using rule 88 (empty -> .)
+    ARTICLE         reduce using rule 88 (empty -> .)
+    NAV             reduce using rule 88 (empty -> .)
+    UL              reduce using rule 88 (empty -> .)
+    OL              reduce using rule 88 (empty -> .)
+    FOOTER          reduce using rule 88 (empty -> .)
+    HEADER          reduce using rule 88 (empty -> .)
+    TABLE           reduce using rule 88 (empty -> .)
+    P               reduce using rule 88 (empty -> .)
+    H               reduce using rule 88 (empty -> .)
+    IMG             reduce using rule 88 (empty -> .)
+    A               reduce using rule 88 (empty -> .)
+    BR              reduce using rule 88 (empty -> .)
+
+    elements                       shift and go to state 97
+    empty                          shift and go to state 25
+
+state 60
+
+    (6) article -> article_tag . elements ARTICLE_FINISH
+    (49) elements -> . empty
+    (50) elements -> . elements element
+    (88) empty -> .
+
+    ARTICLE_FINISH  reduce using rule 88 (empty -> .)
+    SECTION         reduce using rule 88 (empty -> .)
+    ASIDE           reduce using rule 88 (empty -> .)
+    ARTICLE         reduce using rule 88 (empty -> .)
+    NAV             reduce using rule 88 (empty -> .)
+    UL              reduce using rule 88 (empty -> .)
+    OL              reduce using rule 88 (empty -> .)
+    FOOTER          reduce using rule 88 (empty -> .)
+    HEADER          reduce using rule 88 (empty -> .)
+    TABLE           reduce using rule 88 (empty -> .)
+    P               reduce using rule 88 (empty -> .)
+    H               reduce using rule 88 (empty -> .)
+    IMG             reduce using rule 88 (empty -> .)
+    A               reduce using rule 88 (empty -> .)
+    BR              reduce using rule 88 (empty -> .)
+
+    elements                       shift and go to state 98
+    empty                          shift and go to state 25
+
+state 61
+
+    (7) nav -> nav_tag . elements NAV_FINISH
+    (49) elements -> . empty
+    (50) elements -> . elements element
+    (88) empty -> .
+
+    NAV_FINISH      reduce using rule 88 (empty -> .)
+    SECTION         reduce using rule 88 (empty -> .)
+    ASIDE           reduce using rule 88 (empty -> .)
+    ARTICLE         reduce using rule 88 (empty -> .)
+    NAV             reduce using rule 88 (empty -> .)
+    UL              reduce using rule 88 (empty -> .)
+    OL              reduce using rule 88 (empty -> .)
+    FOOTER          reduce using rule 88 (empty -> .)
+    HEADER          reduce using rule 88 (empty -> .)
+    TABLE           reduce using rule 88 (empty -> .)
+    P               reduce using rule 88 (empty -> .)
+    H               reduce using rule 88 (empty -> .)
+    IMG             reduce using rule 88 (empty -> .)
+    A               reduce using rule 88 (empty -> .)
+    BR              reduce using rule 88 (empty -> .)
+
+    elements                       shift and go to state 99
+    empty                          shift and go to state 25
+
+state 62
+
+    (8) ul -> ul_tag . list_elements UL_FINISH
+    (65) list_elements -> . empty
+    (66) list_elements -> . list_elements list_element
+    (88) empty -> .
+
+    UL_FINISH       reduce using rule 88 (empty -> .)
+    LI              reduce using rule 88 (empty -> .)
+
+    list_elements                  shift and go to state 100
+    empty                          shift and go to state 101
+
+state 63
+
+    (9) ol -> ol_tag . list_elements OL_FINISH
+    (65) list_elements -> . empty
+    (66) list_elements -> . list_elements list_element
+    (88) empty -> .
+
+    OL_FINISH       reduce using rule 88 (empty -> .)
+    LI              reduce using rule 88 (empty -> .)
+
+    list_elements                  shift and go to state 102
+    empty                          shift and go to state 101
+
+state 64
+
+    (10) footer -> footer_tag . elements FOOTER_FINISH
+    (49) elements -> . empty
+    (50) elements -> . elements element
+    (88) empty -> .
+
+    FOOTER_FINISH   reduce using rule 88 (empty -> .)
+    SECTION         reduce using rule 88 (empty -> .)
+    ASIDE           reduce using rule 88 (empty -> .)
+    ARTICLE         reduce using rule 88 (empty -> .)
+    NAV             reduce using rule 88 (empty -> .)
+    UL              reduce using rule 88 (empty -> .)
+    OL              reduce using rule 88 (empty -> .)
+    FOOTER          reduce using rule 88 (empty -> .)
+    HEADER          reduce using rule 88 (empty -> .)
+    TABLE           reduce using rule 88 (empty -> .)
+    P               reduce using rule 88 (empty -> .)
+    H               reduce using rule 88 (empty -> .)
+    IMG             reduce using rule 88 (empty -> .)
+    A               reduce using rule 88 (empty -> .)
+    BR              reduce using rule 88 (empty -> .)
+
+    elements                       shift and go to state 103
+    empty                          shift and go to state 25
+
+state 65
+
+    (11) header -> header_tag . elements HEADER_FINISH
+    (49) elements -> . empty
+    (50) elements -> . elements element
+    (88) empty -> .
+
+    HEADER_FINISH   reduce using rule 88 (empty -> .)
+    SECTION         reduce using rule 88 (empty -> .)
+    ASIDE           reduce using rule 88 (empty -> .)
+    ARTICLE         reduce using rule 88 (empty -> .)
+    NAV             reduce using rule 88 (empty -> .)
+    UL              reduce using rule 88 (empty -> .)
+    OL              reduce using rule 88 (empty -> .)
+    FOOTER          reduce using rule 88 (empty -> .)
+    HEADER          reduce using rule 88 (empty -> .)
+    TABLE           reduce using rule 88 (empty -> .)
+    P               reduce using rule 88 (empty -> .)
+    H               reduce using rule 88 (empty -> .)
+    IMG             reduce using rule 88 (empty -> .)
+    A               reduce using rule 88 (empty -> .)
+    BR              reduce using rule 88 (empty -> .)
+
+    elements                       shift and go to state 104
+    empty                          shift and go to state 25
+
+state 66
+
+    (12) table -> table_tag . table_elements TABLE_FINISH
+    (68) table_elements -> . empty
+    (69) table_elements -> . table_elements table_element
+    (88) empty -> .
+
+    TABLE_FINISH    reduce using rule 88 (empty -> .)
+    CAPTION         reduce using rule 88 (empty -> .)
+    TR              reduce using rule 88 (empty -> .)
+
+    table_elements                 shift and go to state 105
+    empty                          shift and go to state 106
+
+state 67
+
+    (16) p -> p_tag . TEXT P_FINISH
+
+    TEXT            shift and go to state 107
+
+
+state 68
+
+    (17) h -> h_tag . TEXT H_FINISH
+
+    TEXT            shift and go to state 108
+
+
+state 69
+
+    (19) img -> img_tag .
+
+    BODY_FINISH     reduce using rule 19 (img -> img_tag .)
+    SECTION         reduce using rule 19 (img -> img_tag .)
+    ASIDE           reduce using rule 19 (img -> img_tag .)
+    ARTICLE         reduce using rule 19 (img -> img_tag .)
+    NAV             reduce using rule 19 (img -> img_tag .)
+    UL              reduce using rule 19 (img -> img_tag .)
+    OL              reduce using rule 19 (img -> img_tag .)
+    FOOTER          reduce using rule 19 (img -> img_tag .)
+    HEADER          reduce using rule 19 (img -> img_tag .)
+    TABLE           reduce using rule 19 (img -> img_tag .)
+    P               reduce using rule 19 (img -> img_tag .)
+    H               reduce using rule 19 (img -> img_tag .)
+    IMG             reduce using rule 19 (img -> img_tag .)
+    A               reduce using rule 19 (img -> img_tag .)
+    BR              reduce using rule 19 (img -> img_tag .)
+    SECTION_FINISH  reduce using rule 19 (img -> img_tag .)
+    ASIDE_FINISH    reduce using rule 19 (img -> img_tag .)
+    ARTICLE_FINISH  reduce using rule 19 (img -> img_tag .)
+    NAV_FINISH      reduce using rule 19 (img -> img_tag .)
+    FOOTER_FINISH   reduce using rule 19 (img -> img_tag .)
+    HEADER_FINISH   reduce using rule 19 (img -> img_tag .)
+
+
+state 70
+
+    (20) a -> a_tag . TEXT A_FINISH
+
+    TEXT            shift and go to state 109
+
+
+state 71
+
+    (21) br -> br_tag .
+
+    BODY_FINISH     reduce using rule 21 (br -> br_tag .)
+    SECTION         reduce using rule 21 (br -> br_tag .)
+    ASIDE           reduce using rule 21 (br -> br_tag .)
+    ARTICLE         reduce using rule 21 (br -> br_tag .)
+    NAV             reduce using rule 21 (br -> br_tag .)
+    UL              reduce using rule 21 (br -> br_tag .)
+    OL              reduce using rule 21 (br -> br_tag .)
+    FOOTER          reduce using rule 21 (br -> br_tag .)
+    HEADER          reduce using rule 21 (br -> br_tag .)
+    TABLE           reduce using rule 21 (br -> br_tag .)
+    P               reduce using rule 21 (br -> br_tag .)
+    H               reduce using rule 21 (br -> br_tag .)
+    IMG             reduce using rule 21 (br -> br_tag .)
+    A               reduce using rule 21 (br -> br_tag .)
+    BR              reduce using rule 21 (br -> br_tag .)
+    SECTION_FINISH  reduce using rule 21 (br -> br_tag .)
+    ASIDE_FINISH    reduce using rule 21 (br -> br_tag .)
+    ARTICLE_FINISH  reduce using rule 21 (br -> br_tag .)
+    NAV_FINISH      reduce using rule 21 (br -> br_tag .)
+    FOOTER_FINISH   reduce using rule 21 (br -> br_tag .)
+    HEADER_FINISH   reduce using rule 21 (br -> br_tag .)
+
+
+state 72
+
+    (28) section_tag -> SECTION . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 110
+    empty                          shift and go to state 8
+
+state 73
+
+    (29) aside_tag -> ASIDE . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 111
+    empty                          shift and go to state 8
+
+state 74
+
+    (30) article_tag -> ARTICLE . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 112
+    empty                          shift and go to state 8
+
+state 75
+
+    (31) nav_tag -> NAV . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 113
+    empty                          shift and go to state 8
+
+state 76
+
+    (32) ul_tag -> UL . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 114
+    empty                          shift and go to state 8
+
+state 77
+
+    (33) ol_tag -> OL . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 115
+    empty                          shift and go to state 8
+
+state 78
+
+    (34) footer_tag -> FOOTER . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 116
+    empty                          shift and go to state 8
+
+state 79
+
+    (35) header_tag -> HEADER . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 117
+    empty                          shift and go to state 8
+
+state 80
+
+    (36) table_tag -> TABLE . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 118
+    empty                          shift and go to state 8
+
+state 81
+
+    (39) p_tag -> P . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 119
+    empty                          shift and go to state 8
+
+state 82
+
+    (40) h_tag -> H . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 120
+    empty                          shift and go to state 8
+
+state 83
+
+    (42) img_tag -> IMG . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 121
+    empty                          shift and go to state 8
+
+state 84
+
+    (47) a_tag -> A . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 122
+    empty                          shift and go to state 8
+
+state 85
+
+    (48) br_tag -> BR .
+
+    BODY_FINISH     reduce using rule 48 (br_tag -> BR .)
+    SECTION         reduce using rule 48 (br_tag -> BR .)
+    ASIDE           reduce using rule 48 (br_tag -> BR .)
+    ARTICLE         reduce using rule 48 (br_tag -> BR .)
+    NAV             reduce using rule 48 (br_tag -> BR .)
+    UL              reduce using rule 48 (br_tag -> BR .)
+    OL              reduce using rule 48 (br_tag -> BR .)
+    FOOTER          reduce using rule 48 (br_tag -> BR .)
+    HEADER          reduce using rule 48 (br_tag -> BR .)
+    TABLE           reduce using rule 48 (br_tag -> BR .)
+    P               reduce using rule 48 (br_tag -> BR .)
+    H               reduce using rule 48 (br_tag -> BR .)
+    IMG             reduce using rule 48 (br_tag -> BR .)
+    A               reduce using rule 48 (br_tag -> BR .)
+    BR              reduce using rule 48 (br_tag -> BR .)
+    SECTION_FINISH  reduce using rule 48 (br_tag -> BR .)
+    ASIDE_FINISH    reduce using rule 48 (br_tag -> BR .)
+    ARTICLE_FINISH  reduce using rule 48 (br_tag -> BR .)
+    NAV_FINISH      reduce using rule 48 (br_tag -> BR .)
+    FOOTER_FINISH   reduce using rule 48 (br_tag -> BR .)
+    HEADER_FINISH   reduce using rule 48 (br_tag -> BR .)
+
+
+state 86
+
+    (27) body_tag -> BODY attributes FINISH .
+
+    BODY_FINISH     reduce using rule 27 (body_tag -> BODY attributes FINISH .)
+    SECTION         reduce using rule 27 (body_tag -> BODY attributes FINISH .)
+    ASIDE           reduce using rule 27 (body_tag -> BODY attributes FINISH .)
+    ARTICLE         reduce using rule 27 (body_tag -> BODY attributes FINISH .)
+    NAV             reduce using rule 27 (body_tag -> BODY attributes FINISH .)
+    UL              reduce using rule 27 (body_tag -> BODY attributes FINISH .)
+    OL              reduce using rule 27 (body_tag -> BODY attributes FINISH .)
+    FOOTER          reduce using rule 27 (body_tag -> BODY attributes FINISH .)
+    HEADER          reduce using rule 27 (body_tag -> BODY attributes FINISH .)
+    TABLE           reduce using rule 27 (body_tag -> BODY attributes FINISH .)
+    P               reduce using rule 27 (body_tag -> BODY attributes FINISH .)
+    H               reduce using rule 27 (body_tag -> BODY attributes FINISH .)
+    IMG             reduce using rule 27 (body_tag -> BODY attributes FINISH .)
+    A               reduce using rule 27 (body_tag -> BODY attributes FINISH .)
+    BR              reduce using rule 27 (body_tag -> BODY attributes FINISH .)
+
+
+state 87
+
+    (14) title -> title_tag TEXT . TITLE_FINISH
+
+    TITLE_FINISH    shift and go to state 123
+
+
+state 88
+
+    (37) title_tag -> TITLE_INITIAL attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 124
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 89
+
+    (38) link_tag -> LINK attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 125
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 90
+
+    (82) attribute -> ID EQUAL VALUE .
+
+    FINISH          reduce using rule 82 (attribute -> ID EQUAL VALUE .)
+    ID              reduce using rule 82 (attribute -> ID EQUAL VALUE .)
+    CLASS           reduce using rule 82 (attribute -> ID EQUAL VALUE .)
+    HREF            reduce using rule 82 (attribute -> ID EQUAL VALUE .)
+    SRC             reduce using rule 82 (attribute -> ID EQUAL VALUE .)
+    TITLE           reduce using rule 82 (attribute -> ID EQUAL VALUE .)
+    LANG            reduce using rule 82 (attribute -> ID EQUAL VALUE .)
+
+
+state 91
+
+    (83) attribute -> CLASS EQUAL VALUE .
+
+    FINISH          reduce using rule 83 (attribute -> CLASS EQUAL VALUE .)
+    ID              reduce using rule 83 (attribute -> CLASS EQUAL VALUE .)
+    CLASS           reduce using rule 83 (attribute -> CLASS EQUAL VALUE .)
+    HREF            reduce using rule 83 (attribute -> CLASS EQUAL VALUE .)
+    SRC             reduce using rule 83 (attribute -> CLASS EQUAL VALUE .)
+    TITLE           reduce using rule 83 (attribute -> CLASS EQUAL VALUE .)
+    LANG            reduce using rule 83 (attribute -> CLASS EQUAL VALUE .)
+
+
+state 92
+
+    (84) attribute -> HREF EQUAL VALUE .
+
+    FINISH          reduce using rule 84 (attribute -> HREF EQUAL VALUE .)
+    ID              reduce using rule 84 (attribute -> HREF EQUAL VALUE .)
+    CLASS           reduce using rule 84 (attribute -> HREF EQUAL VALUE .)
+    HREF            reduce using rule 84 (attribute -> HREF EQUAL VALUE .)
+    SRC             reduce using rule 84 (attribute -> HREF EQUAL VALUE .)
+    TITLE           reduce using rule 84 (attribute -> HREF EQUAL VALUE .)
+    LANG            reduce using rule 84 (attribute -> HREF EQUAL VALUE .)
+
+
+state 93
+
+    (85) attribute -> SRC EQUAL VALUE .
+
+    FINISH          reduce using rule 85 (attribute -> SRC EQUAL VALUE .)
+    ID              reduce using rule 85 (attribute -> SRC EQUAL VALUE .)
+    CLASS           reduce using rule 85 (attribute -> SRC EQUAL VALUE .)
+    HREF            reduce using rule 85 (attribute -> SRC EQUAL VALUE .)
+    SRC             reduce using rule 85 (attribute -> SRC EQUAL VALUE .)
+    TITLE           reduce using rule 85 (attribute -> SRC EQUAL VALUE .)
+    LANG            reduce using rule 85 (attribute -> SRC EQUAL VALUE .)
+
+
+state 94
+
+    (86) attribute -> TITLE EQUAL VALUE .
+
+    FINISH          reduce using rule 86 (attribute -> TITLE EQUAL VALUE .)
+    ID              reduce using rule 86 (attribute -> TITLE EQUAL VALUE .)
+    CLASS           reduce using rule 86 (attribute -> TITLE EQUAL VALUE .)
+    HREF            reduce using rule 86 (attribute -> TITLE EQUAL VALUE .)
+    SRC             reduce using rule 86 (attribute -> TITLE EQUAL VALUE .)
+    TITLE           reduce using rule 86 (attribute -> TITLE EQUAL VALUE .)
+    LANG            reduce using rule 86 (attribute -> TITLE EQUAL VALUE .)
+
+
+state 95
+
+    (87) attribute -> LANG EQUAL VALUE .
+
+    FINISH          reduce using rule 87 (attribute -> LANG EQUAL VALUE .)
+    ID              reduce using rule 87 (attribute -> LANG EQUAL VALUE .)
+    CLASS           reduce using rule 87 (attribute -> LANG EQUAL VALUE .)
+    HREF            reduce using rule 87 (attribute -> LANG EQUAL VALUE .)
+    SRC             reduce using rule 87 (attribute -> LANG EQUAL VALUE .)
+    TITLE           reduce using rule 87 (attribute -> LANG EQUAL VALUE .)
+    LANG            reduce using rule 87 (attribute -> LANG EQUAL VALUE .)
+
+
+state 96
+
+    (4) section -> section_tag elements . SECTION_FINISH
+    (50) elements -> elements . element
+    (51) element -> . section
+    (52) element -> . aside
+    (53) element -> . article
+    (54) element -> . nav
+    (55) element -> . ul
+    (56) element -> . ol
+    (57) element -> . footer
+    (58) element -> . header
+    (59) element -> . table
+    (60) element -> . p
+    (61) element -> . h
+    (62) element -> . img
+    (63) element -> . a
+    (64) element -> . br
+    (4) section -> . section_tag elements SECTION_FINISH
+    (5) aside -> . aside_tag elements ASIDE_FINISH
+    (6) article -> . article_tag elements ARTICLE_FINISH
+    (7) nav -> . nav_tag elements NAV_FINISH
+    (8) ul -> . ul_tag list_elements UL_FINISH
+    (9) ol -> . ol_tag list_elements OL_FINISH
+    (10) footer -> . footer_tag elements FOOTER_FINISH
+    (11) header -> . header_tag elements HEADER_FINISH
+    (12) table -> . table_tag table_elements TABLE_FINISH
+    (16) p -> . p_tag TEXT P_FINISH
+    (17) h -> . h_tag TEXT H_FINISH
+    (19) img -> . img_tag
+    (20) a -> . a_tag TEXT A_FINISH
+    (21) br -> . br_tag
+    (28) section_tag -> . SECTION attributes FINISH
+    (29) aside_tag -> . ASIDE attributes FINISH
+    (30) article_tag -> . ARTICLE attributes FINISH
+    (31) nav_tag -> . NAV attributes FINISH
+    (32) ul_tag -> . UL attributes FINISH
+    (33) ol_tag -> . OL attributes FINISH
+    (34) footer_tag -> . FOOTER attributes FINISH
+    (35) header_tag -> . HEADER attributes FINISH
+    (36) table_tag -> . TABLE attributes FINISH
+    (39) p_tag -> . P attributes FINISH
+    (40) h_tag -> . H attributes FINISH
+    (42) img_tag -> . IMG attributes FINISH
+    (47) a_tag -> . A attributes FINISH
+    (48) br_tag -> . BR
+
+    SECTION_FINISH  shift and go to state 126
+    SECTION         shift and go to state 72
+    ASIDE           shift and go to state 73
+    ARTICLE         shift and go to state 74
+    NAV             shift and go to state 75
+    UL              shift and go to state 76
+    OL              shift and go to state 77
+    FOOTER          shift and go to state 78
+    HEADER          shift and go to state 79
+    TABLE           shift and go to state 80
+    P               shift and go to state 81
+    H               shift and go to state 82
+    IMG             shift and go to state 83
+    A               shift and go to state 84
+    BR              shift and go to state 85
+
+    section_tag                    shift and go to state 58
+    element                        shift and go to state 43
+    section                        shift and go to state 44
+    aside                          shift and go to state 45
+    article                        shift and go to state 46
+    nav                            shift and go to state 47
+    ul                             shift and go to state 48
+    ol                             shift and go to state 49
+    footer                         shift and go to state 50
+    header                         shift and go to state 51
+    table                          shift and go to state 52
+    p                              shift and go to state 53
+    h                              shift and go to state 54
+    img                            shift and go to state 55
+    a                              shift and go to state 56
+    br                             shift and go to state 57
+    aside_tag                      shift and go to state 59
+    article_tag                    shift and go to state 60
+    nav_tag                        shift and go to state 61
+    ul_tag                         shift and go to state 62
+    ol_tag                         shift and go to state 63
+    footer_tag                     shift and go to state 64
+    header_tag                     shift and go to state 65
+    table_tag                      shift and go to state 66
+    p_tag                          shift and go to state 67
+    h_tag                          shift and go to state 68
+    img_tag                        shift and go to state 69
+    a_tag                          shift and go to state 70
+    br_tag                         shift and go to state 71
+
+state 97
+
+    (5) aside -> aside_tag elements . ASIDE_FINISH
+    (50) elements -> elements . element
+    (51) element -> . section
+    (52) element -> . aside
+    (53) element -> . article
+    (54) element -> . nav
+    (55) element -> . ul
+    (56) element -> . ol
+    (57) element -> . footer
+    (58) element -> . header
+    (59) element -> . table
+    (60) element -> . p
+    (61) element -> . h
+    (62) element -> . img
+    (63) element -> . a
+    (64) element -> . br
+    (4) section -> . section_tag elements SECTION_FINISH
+    (5) aside -> . aside_tag elements ASIDE_FINISH
+    (6) article -> . article_tag elements ARTICLE_FINISH
+    (7) nav -> . nav_tag elements NAV_FINISH
+    (8) ul -> . ul_tag list_elements UL_FINISH
+    (9) ol -> . ol_tag list_elements OL_FINISH
+    (10) footer -> . footer_tag elements FOOTER_FINISH
+    (11) header -> . header_tag elements HEADER_FINISH
+    (12) table -> . table_tag table_elements TABLE_FINISH
+    (16) p -> . p_tag TEXT P_FINISH
+    (17) h -> . h_tag TEXT H_FINISH
+    (19) img -> . img_tag
+    (20) a -> . a_tag TEXT A_FINISH
+    (21) br -> . br_tag
+    (28) section_tag -> . SECTION attributes FINISH
+    (29) aside_tag -> . ASIDE attributes FINISH
+    (30) article_tag -> . ARTICLE attributes FINISH
+    (31) nav_tag -> . NAV attributes FINISH
+    (32) ul_tag -> . UL attributes FINISH
+    (33) ol_tag -> . OL attributes FINISH
+    (34) footer_tag -> . FOOTER attributes FINISH
+    (35) header_tag -> . HEADER attributes FINISH
+    (36) table_tag -> . TABLE attributes FINISH
+    (39) p_tag -> . P attributes FINISH
+    (40) h_tag -> . H attributes FINISH
+    (42) img_tag -> . IMG attributes FINISH
+    (47) a_tag -> . A attributes FINISH
+    (48) br_tag -> . BR
+
+    ASIDE_FINISH    shift and go to state 127
+    SECTION         shift and go to state 72
+    ASIDE           shift and go to state 73
+    ARTICLE         shift and go to state 74
+    NAV             shift and go to state 75
+    UL              shift and go to state 76
+    OL              shift and go to state 77
+    FOOTER          shift and go to state 78
+    HEADER          shift and go to state 79
+    TABLE           shift and go to state 80
+    P               shift and go to state 81
+    H               shift and go to state 82
+    IMG             shift and go to state 83
+    A               shift and go to state 84
+    BR              shift and go to state 85
+
+    aside_tag                      shift and go to state 59
+    element                        shift and go to state 43
+    section                        shift and go to state 44
+    aside                          shift and go to state 45
+    article                        shift and go to state 46
+    nav                            shift and go to state 47
+    ul                             shift and go to state 48
+    ol                             shift and go to state 49
+    footer                         shift and go to state 50
+    header                         shift and go to state 51
+    table                          shift and go to state 52
+    p                              shift and go to state 53
+    h                              shift and go to state 54
+    img                            shift and go to state 55
+    a                              shift and go to state 56
+    br                             shift and go to state 57
+    section_tag                    shift and go to state 58
+    article_tag                    shift and go to state 60
+    nav_tag                        shift and go to state 61
+    ul_tag                         shift and go to state 62
+    ol_tag                         shift and go to state 63
+    footer_tag                     shift and go to state 64
+    header_tag                     shift and go to state 65
+    table_tag                      shift and go to state 66
+    p_tag                          shift and go to state 67
+    h_tag                          shift and go to state 68
+    img_tag                        shift and go to state 69
+    a_tag                          shift and go to state 70
+    br_tag                         shift and go to state 71
+
+state 98
+
+    (6) article -> article_tag elements . ARTICLE_FINISH
+    (50) elements -> elements . element
+    (51) element -> . section
+    (52) element -> . aside
+    (53) element -> . article
+    (54) element -> . nav
+    (55) element -> . ul
+    (56) element -> . ol
+    (57) element -> . footer
+    (58) element -> . header
+    (59) element -> . table
+    (60) element -> . p
+    (61) element -> . h
+    (62) element -> . img
+    (63) element -> . a
+    (64) element -> . br
+    (4) section -> . section_tag elements SECTION_FINISH
+    (5) aside -> . aside_tag elements ASIDE_FINISH
+    (6) article -> . article_tag elements ARTICLE_FINISH
+    (7) nav -> . nav_tag elements NAV_FINISH
+    (8) ul -> . ul_tag list_elements UL_FINISH
+    (9) ol -> . ol_tag list_elements OL_FINISH
+    (10) footer -> . footer_tag elements FOOTER_FINISH
+    (11) header -> . header_tag elements HEADER_FINISH
+    (12) table -> . table_tag table_elements TABLE_FINISH
+    (16) p -> . p_tag TEXT P_FINISH
+    (17) h -> . h_tag TEXT H_FINISH
+    (19) img -> . img_tag
+    (20) a -> . a_tag TEXT A_FINISH
+    (21) br -> . br_tag
+    (28) section_tag -> . SECTION attributes FINISH
+    (29) aside_tag -> . ASIDE attributes FINISH
+    (30) article_tag -> . ARTICLE attributes FINISH
+    (31) nav_tag -> . NAV attributes FINISH
+    (32) ul_tag -> . UL attributes FINISH
+    (33) ol_tag -> . OL attributes FINISH
+    (34) footer_tag -> . FOOTER attributes FINISH
+    (35) header_tag -> . HEADER attributes FINISH
+    (36) table_tag -> . TABLE attributes FINISH
+    (39) p_tag -> . P attributes FINISH
+    (40) h_tag -> . H attributes FINISH
+    (42) img_tag -> . IMG attributes FINISH
+    (47) a_tag -> . A attributes FINISH
+    (48) br_tag -> . BR
+
+    ARTICLE_FINISH  shift and go to state 128
+    SECTION         shift and go to state 72
+    ASIDE           shift and go to state 73
+    ARTICLE         shift and go to state 74
+    NAV             shift and go to state 75
+    UL              shift and go to state 76
+    OL              shift and go to state 77
+    FOOTER          shift and go to state 78
+    HEADER          shift and go to state 79
+    TABLE           shift and go to state 80
+    P               shift and go to state 81
+    H               shift and go to state 82
+    IMG             shift and go to state 83
+    A               shift and go to state 84
+    BR              shift and go to state 85
+
+    article_tag                    shift and go to state 60
+    element                        shift and go to state 43
+    section                        shift and go to state 44
+    aside                          shift and go to state 45
+    article                        shift and go to state 46
+    nav                            shift and go to state 47
+    ul                             shift and go to state 48
+    ol                             shift and go to state 49
+    footer                         shift and go to state 50
+    header                         shift and go to state 51
+    table                          shift and go to state 52
+    p                              shift and go to state 53
+    h                              shift and go to state 54
+    img                            shift and go to state 55
+    a                              shift and go to state 56
+    br                             shift and go to state 57
+    section_tag                    shift and go to state 58
+    aside_tag                      shift and go to state 59
+    nav_tag                        shift and go to state 61
+    ul_tag                         shift and go to state 62
+    ol_tag                         shift and go to state 63
+    footer_tag                     shift and go to state 64
+    header_tag                     shift and go to state 65
+    table_tag                      shift and go to state 66
+    p_tag                          shift and go to state 67
+    h_tag                          shift and go to state 68
+    img_tag                        shift and go to state 69
+    a_tag                          shift and go to state 70
+    br_tag                         shift and go to state 71
+
+state 99
+
+    (7) nav -> nav_tag elements . NAV_FINISH
+    (50) elements -> elements . element
+    (51) element -> . section
+    (52) element -> . aside
+    (53) element -> . article
+    (54) element -> . nav
+    (55) element -> . ul
+    (56) element -> . ol
+    (57) element -> . footer
+    (58) element -> . header
+    (59) element -> . table
+    (60) element -> . p
+    (61) element -> . h
+    (62) element -> . img
+    (63) element -> . a
+    (64) element -> . br
+    (4) section -> . section_tag elements SECTION_FINISH
+    (5) aside -> . aside_tag elements ASIDE_FINISH
+    (6) article -> . article_tag elements ARTICLE_FINISH
+    (7) nav -> . nav_tag elements NAV_FINISH
+    (8) ul -> . ul_tag list_elements UL_FINISH
+    (9) ol -> . ol_tag list_elements OL_FINISH
+    (10) footer -> . footer_tag elements FOOTER_FINISH
+    (11) header -> . header_tag elements HEADER_FINISH
+    (12) table -> . table_tag table_elements TABLE_FINISH
+    (16) p -> . p_tag TEXT P_FINISH
+    (17) h -> . h_tag TEXT H_FINISH
+    (19) img -> . img_tag
+    (20) a -> . a_tag TEXT A_FINISH
+    (21) br -> . br_tag
+    (28) section_tag -> . SECTION attributes FINISH
+    (29) aside_tag -> . ASIDE attributes FINISH
+    (30) article_tag -> . ARTICLE attributes FINISH
+    (31) nav_tag -> . NAV attributes FINISH
+    (32) ul_tag -> . UL attributes FINISH
+    (33) ol_tag -> . OL attributes FINISH
+    (34) footer_tag -> . FOOTER attributes FINISH
+    (35) header_tag -> . HEADER attributes FINISH
+    (36) table_tag -> . TABLE attributes FINISH
+    (39) p_tag -> . P attributes FINISH
+    (40) h_tag -> . H attributes FINISH
+    (42) img_tag -> . IMG attributes FINISH
+    (47) a_tag -> . A attributes FINISH
+    (48) br_tag -> . BR
+
+    NAV_FINISH      shift and go to state 129
+    SECTION         shift and go to state 72
+    ASIDE           shift and go to state 73
+    ARTICLE         shift and go to state 74
+    NAV             shift and go to state 75
+    UL              shift and go to state 76
+    OL              shift and go to state 77
+    FOOTER          shift and go to state 78
+    HEADER          shift and go to state 79
+    TABLE           shift and go to state 80
+    P               shift and go to state 81
+    H               shift and go to state 82
+    IMG             shift and go to state 83
+    A               shift and go to state 84
+    BR              shift and go to state 85
+
+    nav_tag                        shift and go to state 61
+    element                        shift and go to state 43
+    section                        shift and go to state 44
+    aside                          shift and go to state 45
+    article                        shift and go to state 46
+    nav                            shift and go to state 47
+    ul                             shift and go to state 48
+    ol                             shift and go to state 49
+    footer                         shift and go to state 50
+    header                         shift and go to state 51
+    table                          shift and go to state 52
+    p                              shift and go to state 53
+    h                              shift and go to state 54
+    img                            shift and go to state 55
+    a                              shift and go to state 56
+    br                             shift and go to state 57
+    section_tag                    shift and go to state 58
+    aside_tag                      shift and go to state 59
+    article_tag                    shift and go to state 60
+    ul_tag                         shift and go to state 62
+    ol_tag                         shift and go to state 63
+    footer_tag                     shift and go to state 64
+    header_tag                     shift and go to state 65
+    table_tag                      shift and go to state 66
+    p_tag                          shift and go to state 67
+    h_tag                          shift and go to state 68
+    img_tag                        shift and go to state 69
+    a_tag                          shift and go to state 70
+    br_tag                         shift and go to state 71
+
+state 100
+
+    (8) ul -> ul_tag list_elements . UL_FINISH
+    (66) list_elements -> list_elements . list_element
+    (67) list_element -> . li
+    (18) li -> . li_tag TEXT LI_FINISH
+    (41) li_tag -> . LI attributes FINISH
+
+    UL_FINISH       shift and go to state 130
+    LI              shift and go to state 134
+
+    list_element                   shift and go to state 131
+    li                             shift and go to state 132
+    li_tag                         shift and go to state 133
+
+state 101
+
+    (65) list_elements -> empty .
+
+    UL_FINISH       reduce using rule 65 (list_elements -> empty .)
+    LI              reduce using rule 65 (list_elements -> empty .)
+    OL_FINISH       reduce using rule 65 (list_elements -> empty .)
+
+
+state 102
+
+    (9) ol -> ol_tag list_elements . OL_FINISH
+    (66) list_elements -> list_elements . list_element
+    (67) list_element -> . li
+    (18) li -> . li_tag TEXT LI_FINISH
+    (41) li_tag -> . LI attributes FINISH
+
+    OL_FINISH       shift and go to state 135
+    LI              shift and go to state 134
+
+    list_element                   shift and go to state 131
+    li                             shift and go to state 132
+    li_tag                         shift and go to state 133
+
+state 103
+
+    (10) footer -> footer_tag elements . FOOTER_FINISH
+    (50) elements -> elements . element
+    (51) element -> . section
+    (52) element -> . aside
+    (53) element -> . article
+    (54) element -> . nav
+    (55) element -> . ul
+    (56) element -> . ol
+    (57) element -> . footer
+    (58) element -> . header
+    (59) element -> . table
+    (60) element -> . p
+    (61) element -> . h
+    (62) element -> . img
+    (63) element -> . a
+    (64) element -> . br
+    (4) section -> . section_tag elements SECTION_FINISH
+    (5) aside -> . aside_tag elements ASIDE_FINISH
+    (6) article -> . article_tag elements ARTICLE_FINISH
+    (7) nav -> . nav_tag elements NAV_FINISH
+    (8) ul -> . ul_tag list_elements UL_FINISH
+    (9) ol -> . ol_tag list_elements OL_FINISH
+    (10) footer -> . footer_tag elements FOOTER_FINISH
+    (11) header -> . header_tag elements HEADER_FINISH
+    (12) table -> . table_tag table_elements TABLE_FINISH
+    (16) p -> . p_tag TEXT P_FINISH
+    (17) h -> . h_tag TEXT H_FINISH
+    (19) img -> . img_tag
+    (20) a -> . a_tag TEXT A_FINISH
+    (21) br -> . br_tag
+    (28) section_tag -> . SECTION attributes FINISH
+    (29) aside_tag -> . ASIDE attributes FINISH
+    (30) article_tag -> . ARTICLE attributes FINISH
+    (31) nav_tag -> . NAV attributes FINISH
+    (32) ul_tag -> . UL attributes FINISH
+    (33) ol_tag -> . OL attributes FINISH
+    (34) footer_tag -> . FOOTER attributes FINISH
+    (35) header_tag -> . HEADER attributes FINISH
+    (36) table_tag -> . TABLE attributes FINISH
+    (39) p_tag -> . P attributes FINISH
+    (40) h_tag -> . H attributes FINISH
+    (42) img_tag -> . IMG attributes FINISH
+    (47) a_tag -> . A attributes FINISH
+    (48) br_tag -> . BR
+
+    FOOTER_FINISH   shift and go to state 136
+    SECTION         shift and go to state 72
+    ASIDE           shift and go to state 73
+    ARTICLE         shift and go to state 74
+    NAV             shift and go to state 75
+    UL              shift and go to state 76
+    OL              shift and go to state 77
+    FOOTER          shift and go to state 78
+    HEADER          shift and go to state 79
+    TABLE           shift and go to state 80
+    P               shift and go to state 81
+    H               shift and go to state 82
+    IMG             shift and go to state 83
+    A               shift and go to state 84
+    BR              shift and go to state 85
+
+    footer_tag                     shift and go to state 64
+    element                        shift and go to state 43
+    section                        shift and go to state 44
+    aside                          shift and go to state 45
+    article                        shift and go to state 46
+    nav                            shift and go to state 47
+    ul                             shift and go to state 48
+    ol                             shift and go to state 49
+    footer                         shift and go to state 50
+    header                         shift and go to state 51
+    table                          shift and go to state 52
+    p                              shift and go to state 53
+    h                              shift and go to state 54
+    img                            shift and go to state 55
+    a                              shift and go to state 56
+    br                             shift and go to state 57
+    section_tag                    shift and go to state 58
+    aside_tag                      shift and go to state 59
+    article_tag                    shift and go to state 60
+    nav_tag                        shift and go to state 61
+    ul_tag                         shift and go to state 62
+    ol_tag                         shift and go to state 63
+    header_tag                     shift and go to state 65
+    table_tag                      shift and go to state 66
+    p_tag                          shift and go to state 67
+    h_tag                          shift and go to state 68
+    img_tag                        shift and go to state 69
+    a_tag                          shift and go to state 70
+    br_tag                         shift and go to state 71
+
+state 104
+
+    (11) header -> header_tag elements . HEADER_FINISH
+    (50) elements -> elements . element
+    (51) element -> . section
+    (52) element -> . aside
+    (53) element -> . article
+    (54) element -> . nav
+    (55) element -> . ul
+    (56) element -> . ol
+    (57) element -> . footer
+    (58) element -> . header
+    (59) element -> . table
+    (60) element -> . p
+    (61) element -> . h
+    (62) element -> . img
+    (63) element -> . a
+    (64) element -> . br
+    (4) section -> . section_tag elements SECTION_FINISH
+    (5) aside -> . aside_tag elements ASIDE_FINISH
+    (6) article -> . article_tag elements ARTICLE_FINISH
+    (7) nav -> . nav_tag elements NAV_FINISH
+    (8) ul -> . ul_tag list_elements UL_FINISH
+    (9) ol -> . ol_tag list_elements OL_FINISH
+    (10) footer -> . footer_tag elements FOOTER_FINISH
+    (11) header -> . header_tag elements HEADER_FINISH
+    (12) table -> . table_tag table_elements TABLE_FINISH
+    (16) p -> . p_tag TEXT P_FINISH
+    (17) h -> . h_tag TEXT H_FINISH
+    (19) img -> . img_tag
+    (20) a -> . a_tag TEXT A_FINISH
+    (21) br -> . br_tag
+    (28) section_tag -> . SECTION attributes FINISH
+    (29) aside_tag -> . ASIDE attributes FINISH
+    (30) article_tag -> . ARTICLE attributes FINISH
+    (31) nav_tag -> . NAV attributes FINISH
+    (32) ul_tag -> . UL attributes FINISH
+    (33) ol_tag -> . OL attributes FINISH
+    (34) footer_tag -> . FOOTER attributes FINISH
+    (35) header_tag -> . HEADER attributes FINISH
+    (36) table_tag -> . TABLE attributes FINISH
+    (39) p_tag -> . P attributes FINISH
+    (40) h_tag -> . H attributes FINISH
+    (42) img_tag -> . IMG attributes FINISH
+    (47) a_tag -> . A attributes FINISH
+    (48) br_tag -> . BR
+
+    HEADER_FINISH   shift and go to state 137
+    SECTION         shift and go to state 72
+    ASIDE           shift and go to state 73
+    ARTICLE         shift and go to state 74
+    NAV             shift and go to state 75
+    UL              shift and go to state 76
+    OL              shift and go to state 77
+    FOOTER          shift and go to state 78
+    HEADER          shift and go to state 79
+    TABLE           shift and go to state 80
+    P               shift and go to state 81
+    H               shift and go to state 82
+    IMG             shift and go to state 83
+    A               shift and go to state 84
+    BR              shift and go to state 85
+
+    header_tag                     shift and go to state 65
+    element                        shift and go to state 43
+    section                        shift and go to state 44
+    aside                          shift and go to state 45
+    article                        shift and go to state 46
+    nav                            shift and go to state 47
+    ul                             shift and go to state 48
+    ol                             shift and go to state 49
+    footer                         shift and go to state 50
+    header                         shift and go to state 51
+    table                          shift and go to state 52
+    p                              shift and go to state 53
+    h                              shift and go to state 54
+    img                            shift and go to state 55
+    a                              shift and go to state 56
+    br                             shift and go to state 57
+    section_tag                    shift and go to state 58
+    aside_tag                      shift and go to state 59
+    article_tag                    shift and go to state 60
+    nav_tag                        shift and go to state 61
+    ul_tag                         shift and go to state 62
+    ol_tag                         shift and go to state 63
+    footer_tag                     shift and go to state 64
+    table_tag                      shift and go to state 66
+    p_tag                          shift and go to state 67
+    h_tag                          shift and go to state 68
+    img_tag                        shift and go to state 69
+    a_tag                          shift and go to state 70
+    br_tag                         shift and go to state 71
+
+state 105
+
+    (12) table -> table_tag table_elements . TABLE_FINISH
+    (69) table_elements -> table_elements . table_element
+    (70) table_element -> . caption
+    (71) table_element -> . tr
+    (24) caption -> . caption_tag TEXT CAPTION_FINISH
+    (13) tr -> . tr_tag table_elements_basic TR_FINISH
+    (46) caption_tag -> . CAPTION attributes FINISH
+    (43) tr_tag -> . TR attributes FINISH
+
+    TABLE_FINISH    shift and go to state 138
+    CAPTION         shift and go to state 144
+    TR              shift and go to state 145
+
+    table_element                  shift and go to state 139
+    caption                        shift and go to state 140
+    tr                             shift and go to state 141
+    caption_tag                    shift and go to state 142
+    tr_tag                         shift and go to state 143
+
+state 106
+
+    (68) table_elements -> empty .
+
+    TABLE_FINISH    reduce using rule 68 (table_elements -> empty .)
+    CAPTION         reduce using rule 68 (table_elements -> empty .)
+    TR              reduce using rule 68 (table_elements -> empty .)
+
+
+state 107
+
+    (16) p -> p_tag TEXT . P_FINISH
+
+    P_FINISH        shift and go to state 146
+
+
+state 108
+
+    (17) h -> h_tag TEXT . H_FINISH
+
+    H_FINISH        shift and go to state 147
+
+
+state 109
+
+    (20) a -> a_tag TEXT . A_FINISH
+
+    A_FINISH        shift and go to state 148
+
+
+state 110
+
+    (28) section_tag -> SECTION attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 149
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 111
+
+    (29) aside_tag -> ASIDE attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 150
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 112
+
+    (30) article_tag -> ARTICLE attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 151
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 113
+
+    (31) nav_tag -> NAV attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 152
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 114
+
+    (32) ul_tag -> UL attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 153
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 115
+
+    (33) ol_tag -> OL attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 154
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 116
+
+    (34) footer_tag -> FOOTER attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 155
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 117
+
+    (35) header_tag -> HEADER attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 156
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 118
+
+    (36) table_tag -> TABLE attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 157
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 119
+
+    (39) p_tag -> P attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 158
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 120
+
+    (40) h_tag -> H attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 159
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 121
+
+    (42) img_tag -> IMG attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 160
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 122
+
+    (47) a_tag -> A attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 161
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 123
+
+    (14) title -> title_tag TEXT TITLE_FINISH .
+
+    HEAD_FINISH     reduce using rule 14 (title -> title_tag TEXT TITLE_FINISH .)
+    TITLE_INITIAL   reduce using rule 14 (title -> title_tag TEXT TITLE_FINISH .)
+    LINK            reduce using rule 14 (title -> title_tag TEXT TITLE_FINISH .)
+
+
+state 124
+
+    (37) title_tag -> TITLE_INITIAL attributes FINISH .
+
+    TEXT            reduce using rule 37 (title_tag -> TITLE_INITIAL attributes FINISH .)
+
+
+state 125
+
+    (38) link_tag -> LINK attributes FINISH .
+
+    HEAD_FINISH     reduce using rule 38 (link_tag -> LINK attributes FINISH .)
+    TITLE_INITIAL   reduce using rule 38 (link_tag -> LINK attributes FINISH .)
+    LINK            reduce using rule 38 (link_tag -> LINK attributes FINISH .)
+
+
+state 126
+
+    (4) section -> section_tag elements SECTION_FINISH .
+
+    BODY_FINISH     reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    SECTION         reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    ASIDE           reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    ARTICLE         reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    NAV             reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    UL              reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    OL              reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    FOOTER          reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    HEADER          reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    TABLE           reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    P               reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    H               reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    IMG             reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    A               reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    BR              reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    SECTION_FINISH  reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    ASIDE_FINISH    reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    ARTICLE_FINISH  reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    NAV_FINISH      reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    FOOTER_FINISH   reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+    HEADER_FINISH   reduce using rule 4 (section -> section_tag elements SECTION_FINISH .)
+
+
+state 127
+
+    (5) aside -> aside_tag elements ASIDE_FINISH .
+
+    BODY_FINISH     reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    SECTION         reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    ASIDE           reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    ARTICLE         reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    NAV             reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    UL              reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    OL              reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    FOOTER          reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    HEADER          reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    TABLE           reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    P               reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    H               reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    IMG             reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    A               reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    BR              reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    SECTION_FINISH  reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    ASIDE_FINISH    reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    ARTICLE_FINISH  reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    NAV_FINISH      reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    FOOTER_FINISH   reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+    HEADER_FINISH   reduce using rule 5 (aside -> aside_tag elements ASIDE_FINISH .)
+
+
+state 128
+
+    (6) article -> article_tag elements ARTICLE_FINISH .
+
+    BODY_FINISH     reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    SECTION         reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    ASIDE           reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    ARTICLE         reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    NAV             reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    UL              reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    OL              reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    FOOTER          reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    HEADER          reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    TABLE           reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    P               reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    H               reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    IMG             reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    A               reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    BR              reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    SECTION_FINISH  reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    ASIDE_FINISH    reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    ARTICLE_FINISH  reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    NAV_FINISH      reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    FOOTER_FINISH   reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+    HEADER_FINISH   reduce using rule 6 (article -> article_tag elements ARTICLE_FINISH .)
+
+
+state 129
+
+    (7) nav -> nav_tag elements NAV_FINISH .
+
+    BODY_FINISH     reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    SECTION         reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    ASIDE           reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    ARTICLE         reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    NAV             reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    UL              reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    OL              reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    FOOTER          reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    HEADER          reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    TABLE           reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    P               reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    H               reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    IMG             reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    A               reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    BR              reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    SECTION_FINISH  reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    ASIDE_FINISH    reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    ARTICLE_FINISH  reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    NAV_FINISH      reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    FOOTER_FINISH   reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+    HEADER_FINISH   reduce using rule 7 (nav -> nav_tag elements NAV_FINISH .)
+
+
+state 130
+
+    (8) ul -> ul_tag list_elements UL_FINISH .
+
+    BODY_FINISH     reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    SECTION         reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    ASIDE           reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    ARTICLE         reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    NAV             reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    UL              reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    OL              reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    FOOTER          reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    HEADER          reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    TABLE           reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    P               reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    H               reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    IMG             reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    A               reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    BR              reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    SECTION_FINISH  reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    ASIDE_FINISH    reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    ARTICLE_FINISH  reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    NAV_FINISH      reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    FOOTER_FINISH   reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+    HEADER_FINISH   reduce using rule 8 (ul -> ul_tag list_elements UL_FINISH .)
+
+
+state 131
+
+    (66) list_elements -> list_elements list_element .
+
+    UL_FINISH       reduce using rule 66 (list_elements -> list_elements list_element .)
+    LI              reduce using rule 66 (list_elements -> list_elements list_element .)
+    OL_FINISH       reduce using rule 66 (list_elements -> list_elements list_element .)
+
+
+state 132
+
+    (67) list_element -> li .
+
+    UL_FINISH       reduce using rule 67 (list_element -> li .)
+    LI              reduce using rule 67 (list_element -> li .)
+    OL_FINISH       reduce using rule 67 (list_element -> li .)
+
+
+state 133
+
+    (18) li -> li_tag . TEXT LI_FINISH
+
+    TEXT            shift and go to state 162
+
+
+state 134
+
+    (41) li_tag -> LI . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 163
+    empty                          shift and go to state 8
+
+state 135
+
+    (9) ol -> ol_tag list_elements OL_FINISH .
+
+    BODY_FINISH     reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    SECTION         reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    ASIDE           reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    ARTICLE         reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    NAV             reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    UL              reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    OL              reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    FOOTER          reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    HEADER          reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    TABLE           reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    P               reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    H               reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    IMG             reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    A               reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    BR              reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    SECTION_FINISH  reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    ASIDE_FINISH    reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    ARTICLE_FINISH  reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    NAV_FINISH      reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    FOOTER_FINISH   reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+    HEADER_FINISH   reduce using rule 9 (ol -> ol_tag list_elements OL_FINISH .)
+
+
+state 136
+
+    (10) footer -> footer_tag elements FOOTER_FINISH .
+
+    BODY_FINISH     reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    SECTION         reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    ASIDE           reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    ARTICLE         reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    NAV             reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    UL              reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    OL              reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    FOOTER          reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    HEADER          reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    TABLE           reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    P               reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    H               reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    IMG             reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    A               reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    BR              reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    SECTION_FINISH  reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    ASIDE_FINISH    reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    ARTICLE_FINISH  reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    NAV_FINISH      reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    FOOTER_FINISH   reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+    HEADER_FINISH   reduce using rule 10 (footer -> footer_tag elements FOOTER_FINISH .)
+
+
+state 137
+
+    (11) header -> header_tag elements HEADER_FINISH .
+
+    BODY_FINISH     reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    SECTION         reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    ASIDE           reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    ARTICLE         reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    NAV             reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    UL              reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    OL              reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    FOOTER          reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    HEADER          reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    TABLE           reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    P               reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    H               reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    IMG             reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    A               reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    BR              reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    SECTION_FINISH  reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    ASIDE_FINISH    reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    ARTICLE_FINISH  reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    NAV_FINISH      reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    FOOTER_FINISH   reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+    HEADER_FINISH   reduce using rule 11 (header -> header_tag elements HEADER_FINISH .)
+
+
+state 138
+
+    (12) table -> table_tag table_elements TABLE_FINISH .
+
+    BODY_FINISH     reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    SECTION         reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    ASIDE           reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    ARTICLE         reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    NAV             reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    UL              reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    OL              reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    FOOTER          reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    HEADER          reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    TABLE           reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    P               reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    H               reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    IMG             reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    A               reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    BR              reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    SECTION_FINISH  reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    ASIDE_FINISH    reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    ARTICLE_FINISH  reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    NAV_FINISH      reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    FOOTER_FINISH   reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+    HEADER_FINISH   reduce using rule 12 (table -> table_tag table_elements TABLE_FINISH .)
+
+
+state 139
+
+    (69) table_elements -> table_elements table_element .
+
+    TABLE_FINISH    reduce using rule 69 (table_elements -> table_elements table_element .)
+    CAPTION         reduce using rule 69 (table_elements -> table_elements table_element .)
+    TR              reduce using rule 69 (table_elements -> table_elements table_element .)
+
+
+state 140
+
+    (70) table_element -> caption .
+
+    TABLE_FINISH    reduce using rule 70 (table_element -> caption .)
+    CAPTION         reduce using rule 70 (table_element -> caption .)
+    TR              reduce using rule 70 (table_element -> caption .)
+
+
+state 141
+
+    (71) table_element -> tr .
+
+    TABLE_FINISH    reduce using rule 71 (table_element -> tr .)
+    CAPTION         reduce using rule 71 (table_element -> tr .)
+    TR              reduce using rule 71 (table_element -> tr .)
+
+
+state 142
+
+    (24) caption -> caption_tag . TEXT CAPTION_FINISH
+
+    TEXT            shift and go to state 164
+
+
+state 143
+
+    (13) tr -> tr_tag . table_elements_basic TR_FINISH
+    (72) table_elements_basic -> . empty
+    (73) table_elements_basic -> . table_elements_basic table_element_basic
+    (88) empty -> .
+
+    TR_FINISH       reduce using rule 88 (empty -> .)
+    TH              reduce using rule 88 (empty -> .)
+    TD              reduce using rule 88 (empty -> .)
+
+    table_elements_basic           shift and go to state 165
+    empty                          shift and go to state 166
+
+state 144
+
+    (46) caption_tag -> CAPTION . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 167
+    empty                          shift and go to state 8
+
+state 145
+
+    (43) tr_tag -> TR . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 168
+    empty                          shift and go to state 8
+
+state 146
+
+    (16) p -> p_tag TEXT P_FINISH .
+
+    BODY_FINISH     reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    SECTION         reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    ASIDE           reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    ARTICLE         reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    NAV             reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    UL              reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    OL              reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    FOOTER          reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    HEADER          reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    TABLE           reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    P               reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    H               reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    IMG             reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    A               reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    BR              reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    SECTION_FINISH  reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    ASIDE_FINISH    reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    ARTICLE_FINISH  reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    NAV_FINISH      reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    FOOTER_FINISH   reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+    HEADER_FINISH   reduce using rule 16 (p -> p_tag TEXT P_FINISH .)
+
+
+state 147
+
+    (17) h -> h_tag TEXT H_FINISH .
+
+    BODY_FINISH     reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    SECTION         reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    ASIDE           reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    ARTICLE         reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    NAV             reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    UL              reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    OL              reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    FOOTER          reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    HEADER          reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    TABLE           reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    P               reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    H               reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    IMG             reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    A               reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    BR              reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    SECTION_FINISH  reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    ASIDE_FINISH    reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    ARTICLE_FINISH  reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    NAV_FINISH      reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    FOOTER_FINISH   reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+    HEADER_FINISH   reduce using rule 17 (h -> h_tag TEXT H_FINISH .)
+
+
+state 148
+
+    (20) a -> a_tag TEXT A_FINISH .
+
+    BODY_FINISH     reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    SECTION         reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    ASIDE           reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    ARTICLE         reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    NAV             reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    UL              reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    OL              reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    FOOTER          reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    HEADER          reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    TABLE           reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    P               reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    H               reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    IMG             reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    A               reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    BR              reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    SECTION_FINISH  reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    ASIDE_FINISH    reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    ARTICLE_FINISH  reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    NAV_FINISH      reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    FOOTER_FINISH   reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+    HEADER_FINISH   reduce using rule 20 (a -> a_tag TEXT A_FINISH .)
+
+
+state 149
+
+    (28) section_tag -> SECTION attributes FINISH .
+
+    SECTION_FINISH  reduce using rule 28 (section_tag -> SECTION attributes FINISH .)
+    SECTION         reduce using rule 28 (section_tag -> SECTION attributes FINISH .)
+    ASIDE           reduce using rule 28 (section_tag -> SECTION attributes FINISH .)
+    ARTICLE         reduce using rule 28 (section_tag -> SECTION attributes FINISH .)
+    NAV             reduce using rule 28 (section_tag -> SECTION attributes FINISH .)
+    UL              reduce using rule 28 (section_tag -> SECTION attributes FINISH .)
+    OL              reduce using rule 28 (section_tag -> SECTION attributes FINISH .)
+    FOOTER          reduce using rule 28 (section_tag -> SECTION attributes FINISH .)
+    HEADER          reduce using rule 28 (section_tag -> SECTION attributes FINISH .)
+    TABLE           reduce using rule 28 (section_tag -> SECTION attributes FINISH .)
+    P               reduce using rule 28 (section_tag -> SECTION attributes FINISH .)
+    H               reduce using rule 28 (section_tag -> SECTION attributes FINISH .)
+    IMG             reduce using rule 28 (section_tag -> SECTION attributes FINISH .)
+    A               reduce using rule 28 (section_tag -> SECTION attributes FINISH .)
+    BR              reduce using rule 28 (section_tag -> SECTION attributes FINISH .)
+
+
+state 150
+
+    (29) aside_tag -> ASIDE attributes FINISH .
+
+    ASIDE_FINISH    reduce using rule 29 (aside_tag -> ASIDE attributes FINISH .)
+    SECTION         reduce using rule 29 (aside_tag -> ASIDE attributes FINISH .)
+    ASIDE           reduce using rule 29 (aside_tag -> ASIDE attributes FINISH .)
+    ARTICLE         reduce using rule 29 (aside_tag -> ASIDE attributes FINISH .)
+    NAV             reduce using rule 29 (aside_tag -> ASIDE attributes FINISH .)
+    UL              reduce using rule 29 (aside_tag -> ASIDE attributes FINISH .)
+    OL              reduce using rule 29 (aside_tag -> ASIDE attributes FINISH .)
+    FOOTER          reduce using rule 29 (aside_tag -> ASIDE attributes FINISH .)
+    HEADER          reduce using rule 29 (aside_tag -> ASIDE attributes FINISH .)
+    TABLE           reduce using rule 29 (aside_tag -> ASIDE attributes FINISH .)
+    P               reduce using rule 29 (aside_tag -> ASIDE attributes FINISH .)
+    H               reduce using rule 29 (aside_tag -> ASIDE attributes FINISH .)
+    IMG             reduce using rule 29 (aside_tag -> ASIDE attributes FINISH .)
+    A               reduce using rule 29 (aside_tag -> ASIDE attributes FINISH .)
+    BR              reduce using rule 29 (aside_tag -> ASIDE attributes FINISH .)
+
+
+state 151
+
+    (30) article_tag -> ARTICLE attributes FINISH .
+
+    ARTICLE_FINISH  reduce using rule 30 (article_tag -> ARTICLE attributes FINISH .)
+    SECTION         reduce using rule 30 (article_tag -> ARTICLE attributes FINISH .)
+    ASIDE           reduce using rule 30 (article_tag -> ARTICLE attributes FINISH .)
+    ARTICLE         reduce using rule 30 (article_tag -> ARTICLE attributes FINISH .)
+    NAV             reduce using rule 30 (article_tag -> ARTICLE attributes FINISH .)
+    UL              reduce using rule 30 (article_tag -> ARTICLE attributes FINISH .)
+    OL              reduce using rule 30 (article_tag -> ARTICLE attributes FINISH .)
+    FOOTER          reduce using rule 30 (article_tag -> ARTICLE attributes FINISH .)
+    HEADER          reduce using rule 30 (article_tag -> ARTICLE attributes FINISH .)
+    TABLE           reduce using rule 30 (article_tag -> ARTICLE attributes FINISH .)
+    P               reduce using rule 30 (article_tag -> ARTICLE attributes FINISH .)
+    H               reduce using rule 30 (article_tag -> ARTICLE attributes FINISH .)
+    IMG             reduce using rule 30 (article_tag -> ARTICLE attributes FINISH .)
+    A               reduce using rule 30 (article_tag -> ARTICLE attributes FINISH .)
+    BR              reduce using rule 30 (article_tag -> ARTICLE attributes FINISH .)
+
+
+state 152
+
+    (31) nav_tag -> NAV attributes FINISH .
+
+    NAV_FINISH      reduce using rule 31 (nav_tag -> NAV attributes FINISH .)
+    SECTION         reduce using rule 31 (nav_tag -> NAV attributes FINISH .)
+    ASIDE           reduce using rule 31 (nav_tag -> NAV attributes FINISH .)
+    ARTICLE         reduce using rule 31 (nav_tag -> NAV attributes FINISH .)
+    NAV             reduce using rule 31 (nav_tag -> NAV attributes FINISH .)
+    UL              reduce using rule 31 (nav_tag -> NAV attributes FINISH .)
+    OL              reduce using rule 31 (nav_tag -> NAV attributes FINISH .)
+    FOOTER          reduce using rule 31 (nav_tag -> NAV attributes FINISH .)
+    HEADER          reduce using rule 31 (nav_tag -> NAV attributes FINISH .)
+    TABLE           reduce using rule 31 (nav_tag -> NAV attributes FINISH .)
+    P               reduce using rule 31 (nav_tag -> NAV attributes FINISH .)
+    H               reduce using rule 31 (nav_tag -> NAV attributes FINISH .)
+    IMG             reduce using rule 31 (nav_tag -> NAV attributes FINISH .)
+    A               reduce using rule 31 (nav_tag -> NAV attributes FINISH .)
+    BR              reduce using rule 31 (nav_tag -> NAV attributes FINISH .)
+
+
+state 153
+
+    (32) ul_tag -> UL attributes FINISH .
+
+    UL_FINISH       reduce using rule 32 (ul_tag -> UL attributes FINISH .)
+    LI              reduce using rule 32 (ul_tag -> UL attributes FINISH .)
+
+
+state 154
+
+    (33) ol_tag -> OL attributes FINISH .
+
+    OL_FINISH       reduce using rule 33 (ol_tag -> OL attributes FINISH .)
+    LI              reduce using rule 33 (ol_tag -> OL attributes FINISH .)
+
+
+state 155
+
+    (34) footer_tag -> FOOTER attributes FINISH .
+
+    FOOTER_FINISH   reduce using rule 34 (footer_tag -> FOOTER attributes FINISH .)
+    SECTION         reduce using rule 34 (footer_tag -> FOOTER attributes FINISH .)
+    ASIDE           reduce using rule 34 (footer_tag -> FOOTER attributes FINISH .)
+    ARTICLE         reduce using rule 34 (footer_tag -> FOOTER attributes FINISH .)
+    NAV             reduce using rule 34 (footer_tag -> FOOTER attributes FINISH .)
+    UL              reduce using rule 34 (footer_tag -> FOOTER attributes FINISH .)
+    OL              reduce using rule 34 (footer_tag -> FOOTER attributes FINISH .)
+    FOOTER          reduce using rule 34 (footer_tag -> FOOTER attributes FINISH .)
+    HEADER          reduce using rule 34 (footer_tag -> FOOTER attributes FINISH .)
+    TABLE           reduce using rule 34 (footer_tag -> FOOTER attributes FINISH .)
+    P               reduce using rule 34 (footer_tag -> FOOTER attributes FINISH .)
+    H               reduce using rule 34 (footer_tag -> FOOTER attributes FINISH .)
+    IMG             reduce using rule 34 (footer_tag -> FOOTER attributes FINISH .)
+    A               reduce using rule 34 (footer_tag -> FOOTER attributes FINISH .)
+    BR              reduce using rule 34 (footer_tag -> FOOTER attributes FINISH .)
+
+
+state 156
+
+    (35) header_tag -> HEADER attributes FINISH .
+
+    HEADER_FINISH   reduce using rule 35 (header_tag -> HEADER attributes FINISH .)
+    SECTION         reduce using rule 35 (header_tag -> HEADER attributes FINISH .)
+    ASIDE           reduce using rule 35 (header_tag -> HEADER attributes FINISH .)
+    ARTICLE         reduce using rule 35 (header_tag -> HEADER attributes FINISH .)
+    NAV             reduce using rule 35 (header_tag -> HEADER attributes FINISH .)
+    UL              reduce using rule 35 (header_tag -> HEADER attributes FINISH .)
+    OL              reduce using rule 35 (header_tag -> HEADER attributes FINISH .)
+    FOOTER          reduce using rule 35 (header_tag -> HEADER attributes FINISH .)
+    HEADER          reduce using rule 35 (header_tag -> HEADER attributes FINISH .)
+    TABLE           reduce using rule 35 (header_tag -> HEADER attributes FINISH .)
+    P               reduce using rule 35 (header_tag -> HEADER attributes FINISH .)
+    H               reduce using rule 35 (header_tag -> HEADER attributes FINISH .)
+    IMG             reduce using rule 35 (header_tag -> HEADER attributes FINISH .)
+    A               reduce using rule 35 (header_tag -> HEADER attributes FINISH .)
+    BR              reduce using rule 35 (header_tag -> HEADER attributes FINISH .)
+
+
+state 157
+
+    (36) table_tag -> TABLE attributes FINISH .
+
+    TABLE_FINISH    reduce using rule 36 (table_tag -> TABLE attributes FINISH .)
+    CAPTION         reduce using rule 36 (table_tag -> TABLE attributes FINISH .)
+    TR              reduce using rule 36 (table_tag -> TABLE attributes FINISH .)
+
+
+state 158
+
+    (39) p_tag -> P attributes FINISH .
+
+    TEXT            reduce using rule 39 (p_tag -> P attributes FINISH .)
+
+
+state 159
+
+    (40) h_tag -> H attributes FINISH .
+
+    TEXT            reduce using rule 40 (h_tag -> H attributes FINISH .)
+
+
+state 160
+
+    (42) img_tag -> IMG attributes FINISH .
+
+    BODY_FINISH     reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    SECTION         reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    ASIDE           reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    ARTICLE         reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    NAV             reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    UL              reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    OL              reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    FOOTER          reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    HEADER          reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    TABLE           reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    P               reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    H               reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    IMG             reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    A               reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    BR              reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    SECTION_FINISH  reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    ASIDE_FINISH    reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    ARTICLE_FINISH  reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    NAV_FINISH      reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    FOOTER_FINISH   reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+    HEADER_FINISH   reduce using rule 42 (img_tag -> IMG attributes FINISH .)
+
+
+state 161
+
+    (47) a_tag -> A attributes FINISH .
+
+    TEXT            reduce using rule 47 (a_tag -> A attributes FINISH .)
+
+
+state 162
+
+    (18) li -> li_tag TEXT . LI_FINISH
+
+    LI_FINISH       shift and go to state 169
+
+
+state 163
+
+    (41) li_tag -> LI attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 170
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 164
+
+    (24) caption -> caption_tag TEXT . CAPTION_FINISH
+
+    CAPTION_FINISH  shift and go to state 171
+
+
+state 165
+
+    (13) tr -> tr_tag table_elements_basic . TR_FINISH
+    (73) table_elements_basic -> table_elements_basic . table_element_basic
+    (74) table_element_basic -> . th
+    (75) table_element_basic -> . td
+    (22) th -> . th_tag TEXT TH_FINISH
+    (23) td -> . td_tag TEXT TD_FINISH
+    (45) th_tag -> . TH attributes FINISH
+    (44) td_tag -> . TD attributes FINISH
+
+    TR_FINISH       shift and go to state 172
+    TH              shift and go to state 178
+    TD              shift and go to state 179
+
+    table_element_basic            shift and go to state 173
+    th                             shift and go to state 174
+    td                             shift and go to state 175
+    th_tag                         shift and go to state 176
+    td_tag                         shift and go to state 177
+
+state 166
+
+    (72) table_elements_basic -> empty .
+
+    TR_FINISH       reduce using rule 72 (table_elements_basic -> empty .)
+    TH              reduce using rule 72 (table_elements_basic -> empty .)
+    TD              reduce using rule 72 (table_elements_basic -> empty .)
+
+
+state 167
+
+    (46) caption_tag -> CAPTION attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 180
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 168
+
+    (43) tr_tag -> TR attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 181
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 169
+
+    (18) li -> li_tag TEXT LI_FINISH .
+
+    UL_FINISH       reduce using rule 18 (li -> li_tag TEXT LI_FINISH .)
+    LI              reduce using rule 18 (li -> li_tag TEXT LI_FINISH .)
+    OL_FINISH       reduce using rule 18 (li -> li_tag TEXT LI_FINISH .)
+
+
+state 170
+
+    (41) li_tag -> LI attributes FINISH .
+
+    TEXT            reduce using rule 41 (li_tag -> LI attributes FINISH .)
+
+
+state 171
+
+    (24) caption -> caption_tag TEXT CAPTION_FINISH .
+
+    TABLE_FINISH    reduce using rule 24 (caption -> caption_tag TEXT CAPTION_FINISH .)
+    CAPTION         reduce using rule 24 (caption -> caption_tag TEXT CAPTION_FINISH .)
+    TR              reduce using rule 24 (caption -> caption_tag TEXT CAPTION_FINISH .)
+
+
+state 172
+
+    (13) tr -> tr_tag table_elements_basic TR_FINISH .
+
+    TABLE_FINISH    reduce using rule 13 (tr -> tr_tag table_elements_basic TR_FINISH .)
+    CAPTION         reduce using rule 13 (tr -> tr_tag table_elements_basic TR_FINISH .)
+    TR              reduce using rule 13 (tr -> tr_tag table_elements_basic TR_FINISH .)
+
+
+state 173
+
+    (73) table_elements_basic -> table_elements_basic table_element_basic .
+
+    TR_FINISH       reduce using rule 73 (table_elements_basic -> table_elements_basic table_element_basic .)
+    TH              reduce using rule 73 (table_elements_basic -> table_elements_basic table_element_basic .)
+    TD              reduce using rule 73 (table_elements_basic -> table_elements_basic table_element_basic .)
+
+
+state 174
+
+    (74) table_element_basic -> th .
+
+    TR_FINISH       reduce using rule 74 (table_element_basic -> th .)
+    TH              reduce using rule 74 (table_element_basic -> th .)
+    TD              reduce using rule 74 (table_element_basic -> th .)
+
+
+state 175
+
+    (75) table_element_basic -> td .
+
+    TR_FINISH       reduce using rule 75 (table_element_basic -> td .)
+    TH              reduce using rule 75 (table_element_basic -> td .)
+    TD              reduce using rule 75 (table_element_basic -> td .)
+
+
+state 176
+
+    (22) th -> th_tag . TEXT TH_FINISH
+
+    TEXT            shift and go to state 182
+
+
+state 177
+
+    (23) td -> td_tag . TEXT TD_FINISH
+
+    TEXT            shift and go to state 183
+
+
+state 178
+
+    (45) th_tag -> TH . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 184
+    empty                          shift and go to state 8
+
+state 179
+
+    (44) td_tag -> TD . attributes FINISH
+    (80) attributes -> . empty
+    (81) attributes -> . attributes attribute
+    (88) empty -> .
+
+    FINISH          reduce using rule 88 (empty -> .)
+    ID              reduce using rule 88 (empty -> .)
+    CLASS           reduce using rule 88 (empty -> .)
+    HREF            reduce using rule 88 (empty -> .)
+    SRC             reduce using rule 88 (empty -> .)
+    TITLE           reduce using rule 88 (empty -> .)
+    LANG            reduce using rule 88 (empty -> .)
+
+    attributes                     shift and go to state 185
+    empty                          shift and go to state 8
+
+state 180
+
+    (46) caption_tag -> CAPTION attributes FINISH .
+
+    TEXT            reduce using rule 46 (caption_tag -> CAPTION attributes FINISH .)
+
+
+state 181
+
+    (43) tr_tag -> TR attributes FINISH .
+
+    TR_FINISH       reduce using rule 43 (tr_tag -> TR attributes FINISH .)
+    TH              reduce using rule 43 (tr_tag -> TR attributes FINISH .)
+    TD              reduce using rule 43 (tr_tag -> TR attributes FINISH .)
+
+
+state 182
+
+    (22) th -> th_tag TEXT . TH_FINISH
+
+    TH_FINISH       shift and go to state 186
+
+
+state 183
+
+    (23) td -> td_tag TEXT . TD_FINISH
+
+    TD_FINISH       shift and go to state 187
+
+
+state 184
+
+    (45) th_tag -> TH attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 188
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 185
+
+    (44) td_tag -> TD attributes . FINISH
+    (81) attributes -> attributes . attribute
+    (82) attribute -> . ID EQUAL VALUE
+    (83) attribute -> . CLASS EQUAL VALUE
+    (84) attribute -> . HREF EQUAL VALUE
+    (85) attribute -> . SRC EQUAL VALUE
+    (86) attribute -> . TITLE EQUAL VALUE
+    (87) attribute -> . LANG EQUAL VALUE
+
+    FINISH          shift and go to state 189
+    ID              shift and go to state 17
+    CLASS           shift and go to state 18
+    HREF            shift and go to state 19
+    SRC             shift and go to state 20
+    TITLE           shift and go to state 21
+    LANG            shift and go to state 22
+
+    attribute                      shift and go to state 16
+
+state 186
+
+    (22) th -> th_tag TEXT TH_FINISH .
+
+    TR_FINISH       reduce using rule 22 (th -> th_tag TEXT TH_FINISH .)
+    TH              reduce using rule 22 (th -> th_tag TEXT TH_FINISH .)
+    TD              reduce using rule 22 (th -> th_tag TEXT TH_FINISH .)
+
+
+state 187
+
+    (23) td -> td_tag TEXT TD_FINISH .
+
+    TR_FINISH       reduce using rule 23 (td -> td_tag TEXT TD_FINISH .)
+    TH              reduce using rule 23 (td -> td_tag TEXT TD_FINISH .)
+    TD              reduce using rule 23 (td -> td_tag TEXT TD_FINISH .)
+
+
+state 188
+
+    (45) th_tag -> TH attributes FINISH .
+
+    TEXT            reduce using rule 45 (th_tag -> TH attributes FINISH .)
+
+
+state 189
+
+    (44) td_tag -> TD attributes FINISH .
+
+    TEXT            reduce using rule 44 (td_tag -> TD attributes FINISH .)
+

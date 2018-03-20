@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Titulo</title>
+</head>
+<body>
+	<ul>
+	  <li>Inicio</li>
+	  <li>Noticias</li>
+	  <li>Artículos</li>
+	  <li>Contacto</li>
+	</ul>
+
+	<ol>
+		<li>Este será el número 20. </li>
+		<li>Este será el 21. </li>
+		<li> Este será el 22. Y así sucesivamente. </li>
+	</ol>
+</body>
+</html>
