@@ -26,7 +26,7 @@ def comprobarCss(node):
 
 	#comprobarCssUniversal(node, hashSelectors["Universal"])
 	#comprobarCssType(node, hashSelectors["Type"])
-	#comprobarCssClass(node, hashSelectors["Class"])
+	comprobarCssClass(node, hashSelectors["Class"])
 	#comprobarCssId(node, hashSelectors["Id"])
 	#comprobarCssAttribute(node, hashSelectors["Attribute"])
 
